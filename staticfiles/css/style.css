@@ -1,3 +1,139 @@
-h1 {
-    color:yellow;
+/* Header Styling */
+#head {
+    border-width: thick;
+    border-style:dotted;
+    border-color: #f2eb1c;
+    background-color:#1408bf;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
+    align-content: stretch;
+    gap:20px;
+  }
+  
+  #logo {
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: flex-start;
+    width:20%;
+    height:20%;
+  }
+  
+  #logo img{
+    color:#f2eb1c;
+    display: block;
+    max-height: 60%;
+    max-width: 60%;
+  }
+  
+  #headtxt {
+    color:#f2eb1c;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self:center;
+    text-align: center;
+    font-family: "Roberto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    width: 80%;
+  }
+  
+  #nav{
+    color:#f2eb1c;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    width: 20%;
+    text-align: right;
+  }
+  
+  #nav a {
+    color:#f2eb1c;
+  }
+  
+  #menu { 
+    align-self:flex-end;
+    text-align: center;
+    width: 100%;
+  }
+  
+  #menu a {
+    color:#1408bf;
+    font-family: "Roberto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 10%;
+  }
+  
+/* Body Styling */
+
+  main {
+    flex: 1 0 auto;
+    margin-bottom: 20px;
 }
+
+#body {
+  border-width: thick;
+  border-style: dotted;
+  border-color: #1408bf;
+  background-color: #f2eb1c; 
+}
+
+.bodytxt {
+  color:#1408bf;
+  text-align: center;
+  font-family: "Roberto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.bodytxt h1{
+  font-weight: 700;
+}
+
+.bodytxt a{
+  color: #1408bf;
+}
+
+ /* Footer Styling */
+
+#footer {
+    border-width: thick;
+    border-style:dotted;
+    border-color: #f2eb1c;
+    background-color:#1408bf;
+  }
+  
+  .foottxt {
+    color:#f2eb1c;
+    text-align: center;
+    font-family: "Roberto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .foottxt h1 {
+    font-weight: 700;
+  }
+  
+  #socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  #footer  i {
+    font-size: 160%;
+    padding: 20px;
+    color: #f2eb1c;  
+    
+  }
+   
