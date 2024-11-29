@@ -1,5 +1,7 @@
 {% load static %}
 
+{% url 'landing' as landing_url %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +45,9 @@
         </div>
     <!-- main section -->
      <main>
-
+        {% block content %}
+        <!-- Content goes here     -->
+         {% endblock content %}
      </main>
      <!-- footer section -->
     <footer>

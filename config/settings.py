@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 # if os.path.isfile('env.py'):
 #     import env
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-glaw2000-leftovers-lajp76mi6xk.ws.codeinstitute-ide.net', 'leftovers-app-32aa0915dd0b.herokuapp.com']
 
@@ -53,8 +53,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'blog',
     'about',
-    'landing',
-    
+    'landing',    
 ]
 
 MIDDLEWARE = [
