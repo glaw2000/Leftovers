@@ -2,7 +2,7 @@
 #head {
     border-width: thick;
     border-style:dotted;
-    border-color: #f2eb1c;
+    border-color: yellow;
     background-color:#1408bf;
     display: flex;
     flex-direction: row;
@@ -22,14 +22,14 @@
   }
   
   #logo img{
-    color:#f2eb1c;
+    color:yellow;
     display: block;
     max-height: 60%;
     max-width: 60%;
   }
   
   #headtxt {
-    color:#f2eb1c;
+    color:yellow;
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: auto;
@@ -43,7 +43,7 @@
   }
   
   #nav{
-    color:#f2eb1c;
+    color:yellow;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
@@ -53,7 +53,7 @@
   }
   
   #nav a {
-    color:#f2eb1c;
+    color:yellow;
   }
   
   #menu { 
@@ -82,7 +82,7 @@ main {
   border-width: thick;
   border-style: dotted;
   border-color: #1408bf;
-  background-color: #f2eb1c; 
+  background-color: yellow; 
 }
 
 .bodytxt {
@@ -137,12 +137,12 @@ main {
 #footer {
     border-width: thick;
     border-style:dotted;
-    border-color: #f2eb1c;
+    border-color: yellow;
     background-color:#1408bf;
   }
   
   .foottxt {
-    color:#f2eb1c;
+    color:yellow;
     text-align: center;
     font-family: "Roberto Mono", monospace;
     font-optical-sizing: auto;
@@ -163,7 +163,7 @@ main {
   #footer  i {
     font-size: 160%;
     padding: 20px;
-    color: #f2eb1c;  
+    color: yellow;  
     
   }
    
