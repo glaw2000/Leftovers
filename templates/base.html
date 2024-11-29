@@ -2,6 +2,7 @@
 
 {% url 'landing' as landing_url %}
 {% url 'blog' as blog_url %}
+{% url 'blog' as about_url %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +39,7 @@
                 <h2>
                     <a href="{% url 'home' %}">Home</a>
                     <a href="{% url 'blog' %}">All Posts</a>
-                    <a href="">About</a>
+                    <a href="{% url 'about' %}">About</a>
                     <a href="">Register</a>
                     <a href="">Sign In</a>
                 </h2>
