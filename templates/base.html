@@ -19,7 +19,7 @@
     <header>
         <div id="head">
             <div id="logo">
-                <a src="">
+                <a href="{% url 'home' %}">
                     <img src="{% static 'images/yellow_plate.png' %}" alt="fork plate knife">
                 </a>
             </div>
@@ -36,8 +36,8 @@
         <div id="menu_banner">
             <div id="menu">
                 <h2>
-                    <a href="">Home</a>
-                    <a href="">All Posts</a>
+                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'blog' %}">All Posts</a>
                     <a href="">About</a>
                     <a href="">Register</a>
                     <a href="">Sign In</a>
