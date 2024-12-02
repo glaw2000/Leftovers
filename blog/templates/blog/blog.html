@@ -11,7 +11,16 @@
     <div class="categories"> 
         {% for post in items %}
             <div class="cell">
-                <p>{{ post.title }}</p>
+                <div class="post_img">
+                    {% if "placeholder" in post.image %}
+                    <img src="{% static 'images/default.png' %}" alt="placeholder image">
+                    {% else %}
+                    <img src=" {{ post.image.url }}" alt="{{ post.alt_image }}">
+                    {% endif %}
+                </div>
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.excerpt }}</p>
+                <p>Created on: {{ post.created_on}}</p>
             </div>
         {% empty %}
             <p>No posts to display</p>
