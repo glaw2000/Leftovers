@@ -11,3 +11,4 @@ class AllPosts(ListView):
     queryset = Post.objects.order_by("created_on")
     template_name = 'blog/blog.html'
     context_object_name = 'items'
+    paginate_by = 9

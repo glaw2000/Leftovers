@@ -2,29 +2,44 @@
 {% load static %}
 
 {% block content %}
-<!-- AllPosts page content starts here -->   
+<!-- AllPosts page (blog.html) content starts here -->   
 <div id="body" class="bodytxt" >
     <h1>All Blog posts</h1>
     <p>Some text</p>
     <!-- want to filter display based on what user selected from home page -->
         
     <div class="categories"> 
-        {% for post in items %}
-            <div class="cell">
-                <div class="post_img">
-                    {% if "placeholder" in post.image %}
+    {% for post in items %}
+        <div class="cell">
+            <div class="post_img">
+                {% if "placeholder" in post.image %}
                     <img src="{% static 'images/default.png' %}" alt="placeholder image">
-                    {% else %}
+                {% else %}
                     <img src=" {{ post.image.url }}" alt="{{ post.alt_image }}">
-                    {% endif %}
-                </div>
-                <h2>{{ post.title }}</h2>
-                <p>{{ post.excerpt }}</p>
-                <p>Created on: {{ post.created_on}}</p>
+                {% endif %}
             </div>
-        {% empty %}
-            <p>No posts to display</p>
-        {% endfor %}
-    </div>    
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.excerpt }}</p>
+            <p>Created on: {{ post.created_on}}</p>
+        </div>
+    {% empty %}
+        <p>No posts to display</p>
+    {% endfor %}
+        </div>
+    
+    {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">PREV &laquo;</a></li>
+                {% endif %}
+
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
 </div>
+<!-- All Posts page (blog.html) content ends here -->
 {% endblock content %}
