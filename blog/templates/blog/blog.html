@@ -8,42 +8,14 @@
     <p>Some text</p>
     <!-- want to filter display based on what user selected from home page -->
         
-    <div class="categories">
-            
-        <div class="post cell">
-            <!-- post 1 -->
-        </div>
-        
-        <div class="post cell">
-            <!-- post 2 -->
-        </div>
-
-        <div class="post cell">
-            <!-- post 3 -->
-        </div>
-
-        <div class="post cell">
-            <!-- post 4 -->
-        </div>
-        
-        <div class="post cell">
-            <!-- post 5 -->
-        </div>
-
-        <div class="post cell">
-            <!-- post 6 -->
-        </div>
-
-        <div class="post cell">
-            <!-- post 7 -->
-        </div>
-        
-        <div class="post cell">
-            <!-- post 8 -->
-        </div>
-
-        <div class="post cell">
-            <!-- post 9 -->
-    </div>
+    <div class="categories"> 
+        {% for post in items %}
+            <div class="cell">
+                <p>{{ post.title }}</p>
+            </div>
+        {% empty %}
+            <p>No posts to display</p>
+        {% endfor %}
+    </div>    
 </div>
 {% endblock content %}
