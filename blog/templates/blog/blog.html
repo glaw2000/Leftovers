@@ -13,14 +13,16 @@
         <div class="cell">
             <div class="post_img">
                 {% if "placeholder" in post.image %}
-                    <img src="{% static 'images/default.png' %}" alt="placeholder image">
+                    <img src="{% static 'images/default.webp' %}" alt="placeholder image">
                 {% else %}
                     <img src=" {{ post.image.url }}" alt="{{ post.alt_image }}">
                 {% endif %}
             </div>
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.excerpt }}</p>
-            <p>Created on: {{ post.created_on}}</p>
+            <a href="{% url 'post_detail' post.slug %}">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.excerpt }}</p>
+                <p>Created on: {{ post.created_on}}</p>
+            </a>
         </div>
     {% empty %}
         <p>No posts to display</p>
