@@ -42,7 +42,7 @@
     width: 80%;
   }
   
-  #nav{
+  #burger{
     color:yellow;
     flex-grow: 0;
     flex-shrink: 1;
@@ -52,7 +52,7 @@
     text-align: right;
   }
   
-  #nav a {
+  #burger a {
     color:yellow;
   }
   
@@ -69,7 +69,9 @@
     font-weight: 400;
     font-style: normal;
     padding-left: 10%;
+    text-decoration: none;
   }
+  
   
 /* Body Styling */
 
