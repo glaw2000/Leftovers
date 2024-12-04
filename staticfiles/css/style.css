@@ -1,77 +1,96 @@
 /* Header Styling */
 #head {
-    border-width: thick;
-    border-style:dotted;
-    border-color: yellow;
-    background-color:#1408bf;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: start;
-    align-items: stretch;
-    align-content: stretch;
-    gap:20px;
-  }
+  border-width: thick;
+  border-style:dotted;
+  border-color: yellow;
+  background-color:#1408bf;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: stretch;
+  align-content: stretch;
+  gap:20px;
+}
   
-  #logo {
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: flex-start;
-    width:20%;
-    height:20%;
-  }
+#logo {
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: flex-start;
+  width:20%;
+  height:20%;
+}
   
-  #logo img{
-    color:yellow;
-    display: block;
-    max-height: 60%;
-    max-width: 60%;
-  }
+#logo img{
+  color:yellow;
+  display: block;
+  max-height: 60%;
+  max-width: 60%;
+}
   
-  #headtxt {
-    color:yellow;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self:center;
-    text-align: center;
-    font-family: "Roberto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    width: 80%;
-  }
+#headtxt {
+  color:yellow;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self:center;
+  text-align: center;
+  font-family: "Roberto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  width: 80%;
+}
   
-  #burger{
-    color:yellow;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    width: 20%;
-    text-align: right;
-  }
+#burger{
+  color:yellow;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  width: 20%;
+  text-align: right;
+}
   
-  #burger a {
-    color:yellow;
-  }
+#burger a {
+  color:yellow;
+}
   
-  #menu { 
-    align-self:flex-end;
-    text-align: center;
-    width: 100%;
-  }
+#menu { 
+  align-self:flex-end;
+  text-align: center;
+  width: 100%;
+}
   
-  #menu a {
-    color:#1408bf;
-    font-family: "Roberto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    padding-left: 10%;
-    text-decoration: none;
-  }
+#menu a {
+  color:#1408bf;
+  font-family: "Roberto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 10%;
+  text-decoration: none;
+}
   
+/* styling auth forms */
+.form_left {
+  text-align: left;
+}
+
+#signup_form > ul {
+  display: none;
+}
+
+.btn-signup {
+  background-color: #1408bf;
+  color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #1408bf;
+}
   
 /* Body Styling */
 
@@ -176,5 +195,8 @@ main {
     padding: 20px;
     color: yellow;  
     
-  }
+  } 
+
+
+
    
