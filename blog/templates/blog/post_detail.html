@@ -39,13 +39,13 @@
                     {% if not comment.approved and comment.fk_user_id == user %}
                     faded{% elif not comment.approved %} d-none{% endif %}">
                     <p class="font-weight-bold">
-                        {{ comment.author }}
+                        {{ comment.fk_user_id }}
                         <span class="font-weight-normal">
-                            {{ comment.created_on }}
+                        {{ comment.created_on }}
                         </span> wrote:
                     </p>
                     <div id="comment{{ comment.fk_post_id }}">
-                        {{ comment.body | linebreaks }}
+                        {{ comment.remark | linebreaks }}
                     </div>
                     {% if not comment.approved and comment.fk_user_id == user %}
                     <p class="approval">
