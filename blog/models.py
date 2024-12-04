@@ -29,9 +29,10 @@ class Comment(models.Model):
     fk_post_id = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     fk_user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
     remark = models.TextField()
+    approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["created_on"]
     def __str__(self):
-        return f"Comment {self.body} by {self.author}"
+        return f"Comment {self.remark} by {self.fk_user_id}"
