@@ -53,7 +53,7 @@
                             <a class="{% if request.path == logout_url %}active{% endif %}" aria-current="page" 
                             href="{% url 'account_logout' %}">Log Out</a>
                         {% else %}
-                            <a class="{% if request.path == signup_url %}active{% endif %}" aria-current="page" 
+                            <a class="{% if request.path == signup_url %}active{% endif %} register" aria-current="page" 
                             href="{% url 'account_signup' %}">Register</a>
                             <a class="{% if request.path == login_url %}active{% endif %}" aria-current="page" 
                             href="{% url 'account_login' %}">Log In</a>   

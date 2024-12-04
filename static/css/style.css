@@ -72,8 +72,25 @@
   text-decoration: none;
 }
   
-/* add something here to override menu styling when it comes to auth forms */
+/* styling auth forms */
+.form_left {
+  text-align: left;
+}
 
+#signup_form > ul {
+  display: none;
+}
+
+.btn-signup {
+  background-color: #1408bf;
+  color: #fff;
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: #fff;
+    color: #1408bf;
+}
   
 /* Body Styling */
 
@@ -178,5 +195,8 @@ main {
     padding: 20px;
     color: yellow;  
     
-  }
+  } 
+
+
+
    
