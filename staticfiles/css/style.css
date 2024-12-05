@@ -77,9 +77,6 @@
   text-align: left;
 }
 
-#signup_form > ul {
-  display: none;
-}
 
 .btn-signup {
   background-color: #1408bf;
@@ -111,9 +108,29 @@
     color: #1408bf;
 }
 
-.approval {
+.success{
+  font-weight: bold;
   background-color: yellow;
+  border: thick dotted #1408bf;
+  margin-top: 10px;
 }
+
+.approval {
+  color:red;
+}
+
+.comment-head {
+  font-weight: bold;
+  color: #1408bf;
+  background-color: yellow;
+  border: 1pt solid #1408bf;
+}
+
+.p-2 > div {
+  font-style: italic;
+}
+
+
 
 
 /* Body Styling */
