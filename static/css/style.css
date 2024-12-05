@@ -108,6 +108,10 @@
     color: #1408bf;
 }
 
+#div_id_remark > .form-label {
+  display: none;
+}
+
 .success{
   font-weight: bold;
   background-color: yellow;
