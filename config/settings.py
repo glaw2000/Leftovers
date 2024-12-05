@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 #     import env
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-glaw2000-leftovers-lajp76mi6xk.ws.codeinstitute-ide.net', '8080-glaw2000-leftovers-lajp76mi6xk.ws.codeinstitute-ide.net', 'leftovers-app-32aa0915dd0b.herokuapp.com']
+ALLOWED_HOSTS = ['8000-glaw2000-leftovers-lajp76mi6xk.ws.codeinstitute-ide.net', 'leftovers-app-32aa0915dd0b.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
