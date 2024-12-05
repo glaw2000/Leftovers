@@ -1,5 +1,9 @@
 const editButtons = document.getElementsByClassName("btn-edit");
-const commentText = document.getElementById("id_body");
+// const commentText = document.getElementById("id_remark");
+// above line didn't work. Line below did work from perplexity
+// const commentText = document.querySelector('#commentForm textarea');
+// then tried the below and it too worked
+const commentText = document.querySelector('#id_remark');
 const commentForm = document.getElementById("commentForm");
 const submitButton = document.getElementById("submitButton");
 const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
