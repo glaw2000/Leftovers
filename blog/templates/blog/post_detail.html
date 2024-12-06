@@ -8,7 +8,11 @@
         <h2> {{ post.title }}</h2>
         <p>Created:  {{ post.created_on }}</p>
         <div class="subject_img">
-            <img src="{% static 'images/default.webp' %}" class="scale" alt="placeholder">
+            {% if "placeholder" in post.image.url %}
+                <img src="{% static 'images/default.webp' %}" alt="placeholder image">
+            {% else %}
+                <img src=" {{ post.image.url }}" alt="{{ post.alt_image }}">
+            {% endif %}
         </div>
         <div class="subject_txt">
             <p>{{ post.content | safe }}</p><br>
