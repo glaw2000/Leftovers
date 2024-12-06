@@ -2,6 +2,27 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+class Ingredient(models.Model):
+    """
+    Stores a list of main ingredients for each Post model by Post ID
+    """
+    INGREDIENT_CHOICES = [
+        (0, "any"),
+        (1, "meat"),
+        (2, "fish"),
+        (3, "veg"),
+        (4, "fruit"),
+        (5, "dairy"),
+        (6, "eggs"),
+        (7, "bread"),
+        (8, "grains"),
+    ]
+    
+    ingredient = models.IntegerField(choices=INGREDIENT_CHOICES, default=0)
+
+    def __str__(self):
+        return self.get_ingredient_display()
+
 class Post(models.Model):
     """
     Stores a single blog post entry related to User model by author ID.
@@ -13,10 +34,12 @@ class Post(models.Model):
     )
     content = models.TextField()
     excerpt = models.TextField(blank=True)
+    ingredients = models.ManyToManyField(Ingredient, related_name="posts")
     image = CloudinaryField('image', default='placeholder')
     alt_image =models.CharField(max_length=200)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+
     class Meta:
         ordering = ["-created_on"]
     def __str__(self):
