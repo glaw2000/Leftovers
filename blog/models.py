@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 
 class Ingredient(models.Model):
     """
-    Stores a list of main ingredients for each Post model by Post ID
+    Stores a list of main ingredients for each Post from Post model to use
     """
     INGREDIENT_CHOICES = [
         (0, "any"),
@@ -23,6 +23,27 @@ class Ingredient(models.Model):
     def __str__(self):
         return self.get_ingredient_display()
 
+class Category(models.Model):
+    """
+    Stores a list of categories for each Post from Post model to use
+    """
+    CATEGORY_CHOICES = [
+        (0, "any"),
+        (1, "starter"),
+        (2, "main"),
+        (3, "pudding"),
+        (4, "snack"),
+        (5, "sweet_treat"),
+        (6, "portable"),
+        (7, "entertaining"),
+        (8, "healthy"),
+    ]
+    
+    category = models.IntegerField(choices=CATEGORY_CHOICES, default=0)
+
+    def __str__(self):
+        return self.get_category_display()
+
 class Post(models.Model):
     """
     Stores a single blog post entry related to User model by author ID.
@@ -35,6 +56,7 @@ class Post(models.Model):
     content = models.TextField()
     excerpt = models.TextField(blank=True)
     ingredients = models.ManyToManyField(Ingredient, related_name="posts")
+    categories = models.ManyToManyField(Category, related_name="select_posts")
     image = CloudinaryField('image', default='placeholder')
     alt_image =models.CharField(max_length=200)
     created_on = models.DateTimeField(auto_now_add=True)
@@ -59,3 +81,22 @@ class Comment(models.Model):
         ordering = ["created_on"]
     def __str__(self):
         return f"Comment {self.remark} by {self.fk_user_id}"
+
+
+class Like(models.Model):
+    """
+    Stores a like relationship between Post ID and User Id.
+    """
+    fk_post_id = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="likes")
+    fk_user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name="liker")
+    created_at = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        unique_together = ('fk_post_id', 'fk_user_id')
+    def __str__(self):
+        return f"{self.fk_user_id} likes {self.fk_post_id}"
+
+
+     
+    
+    
