@@ -37,6 +37,9 @@ class Category(models.Model):
         (6, "portable"),
         (7, "entertaining"),
         (8, "healthy"),
+        (9, "breakfast"),
+        (10, "lunch"),
+        (11, "dinner"),
     ]
     
     category = models.IntegerField(choices=CATEGORY_CHOICES, default=0)
