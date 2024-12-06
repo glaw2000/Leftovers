@@ -11,7 +11,7 @@
     {% for post in items %}
         <div class="cell">
             <div class="post_img">
-                {% if "placeholder" in post.image %}
+                {% if "placeholder" in post.image.url %}
                     <img src="{% static 'images/default.webp' %}" alt="placeholder image">
                 {% else %}
                     <img src=" {{ post.image.url }}" alt="{{ post.alt_image }}">
