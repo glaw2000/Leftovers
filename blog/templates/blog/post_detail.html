@@ -16,27 +16,21 @@
         </div>
         <div class="subject_txt">
             <p>{{ post.content | safe }}</p><br>
-            <!-- <i class="fa-solid fa-bookmark"></i>
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-solid fa-share-nodes"></i>
-            <i class="fa-solid fa-message"></i> -->
+            <!-- <i class="fa-solid fa-bookmark"></i> -->
         </div>
+        <!-- Displaying count of likes -->
+        <div class = feedback>
+            <i class="fa-solid fa-thumbs-up" id="like-button" style="cursor:pointer;"></i> 
+            <span id="like-count">{{ like_count }}</span>
+         </div>
     </div>
-    <!-- Displaying count of comments -->
-    <div class="row">
-        <div class="col-12">
-            <strong class="text-secondary">
-                <i class="far fa-comments"></i> {{ comment_count }}
-            </strong>
-        </div>
-        <div class="col-12">
-            <hr>
-        </div>
-    </div>
+    
     <!-- Displaying Comments -->
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
-            <h3>Comments:</h3>
+            <h3>Comments <i class="far fa-comments"></i> 
+                <span id="comment-count">{{ comment_count }}</span></h3>
+            
             <div class="card-body">
                 <!-- for loop inside the empty control tags
                 to iterate through each comment in comments -->
