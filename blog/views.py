@@ -36,6 +36,7 @@ def post_detail(request, slug):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    user_has_liked = post.likes.filter (fk_user_id=request.user).exists() if request.user.is_authenticated else False
     
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -50,6 +51,7 @@ def post_detail(request, slug):
                 )
 
     comment_form = CommentForm()
+    
 
     return render(
         request,
@@ -59,8 +61,11 @@ def post_detail(request, slug):
             "comments": comments,
             "comment_count": comment_count,
             "comment_form": comment_form,
+            "user_has_liked":user_has_liked,
         },
     )
+
+    
 
 @login_required
 def like_post(request, slug):

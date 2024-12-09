@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 <div id="body" class="bodytxt" >  
-    
+    <!-- Displaying Post -->
     <div class="post">
         <h2> {{ post.title }}</h2>
         <p>Created:  {{ post.created_on }}</p>
@@ -17,10 +17,14 @@
         <div class="subject_txt">
             <p>{{ post.content | safe }}</p><br>
         </div>
-        <!-- Displaying thumbs up like button and count of likes -->
+        <!-- Displaying like button and count of likes -->
         <div class = feedback>
-            <i class="fa-solid fa-thumbs-up" id="like-button" style="cursor:pointer;"></i> 
-            <span id="like-count">{{ like_count }}</span>
+            {% if user.is_authenticated %}
+                <i class="fa-solid fa-thumbs-up fa-2x {% if user_has_liked %}liked{% endif %}" id="like-button" style="cursor:pointer;" aria-label="thumbs-up"></i> 
+            {% else %}
+                <i class="fa-solid fa-thumbs-up fa-2x" id="like-button" aria-label="thumbs-up"></i>
+            {% endif %} 
+            <span id="like-count">{{ post.likes.count }}</span>
          </div>
     </div>
     
@@ -79,6 +83,7 @@
         </div>
     </div>
 </div>
+
 <!-- Delete confirmation modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -99,16 +104,14 @@
     </div>
     
     
-</div>         
+</div>  
+
 {% csrf_token %}
 
 <script>
     const postSlug = "{{ post.slug }}";
-    document.getElementById('like-button').addEventListener('click', function() {
-        likePost(postSlug);
-        }
-    );
 </script>
+
 <script src="{% static 'js/likes.js' %}"></script>       
 
 {% endblock content %}

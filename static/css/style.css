@@ -232,6 +232,10 @@ main {
   margin: 10px;
 }
 
+#like-button.liked {
+  color:green;
+}
+
 /* Footer Styling */
 
 #footer {
