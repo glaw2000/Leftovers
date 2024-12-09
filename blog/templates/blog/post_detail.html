@@ -98,7 +98,20 @@
             </div>
         </div>
     </div>
+    
+    
 </div>         
+{% csrf_token %}
+
+<script>
+    const postSlug = "{{ post.slug }}";
+    document.getElementById('like-button').addEventListener('click', function() {
+        likePost(postSlug);
+        }
+    );
+</script>
+<script src="{% static 'js/likes.js' %}"></script>       
+
 {% endblock content %}
 
 {% block extras %}

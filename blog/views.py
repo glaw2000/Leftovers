@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import ListView
 from django.contrib import messages
-from django.http import HttpResponseRedirect
-from .models import Post, Comment
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect, JsonResponse
+from .models import Post, Comment, Like
 from .forms import CommentForm
 
 # Create your views here.
@@ -60,6 +61,21 @@ def post_detail(request, slug):
             "comment_form": comment_form,
         },
     )
+
+@login_required
+def like_post(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    like, created = Like.objects.get_or_create(fk_post_id=post, fk_user_id = request.user)
+    if not created:
+        like.delete()
+        liked=False
+    else:
+        liked=True
+    likes_count = post.likes.count()
+    return JsonResponse({
+        'liked':liked,
+        'like_count':likes_count
+    })
 
 def comment_edit(request, slug, comment_id):
     """

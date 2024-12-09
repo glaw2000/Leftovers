@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+
 class Ingredient(models.Model):
     """
     Stores a list of main ingredients for each Post from Post model to use
@@ -22,6 +23,7 @@ class Ingredient(models.Model):
 
     def __str__(self):
         return self.get_ingredient_display()
+
 
 class Category(models.Model):
     """
@@ -47,6 +49,7 @@ class Category(models.Model):
     def __str__(self):
         return self.get_category_display()
 
+
 class Post(models.Model):
     """
     Stores a single blog post entry related to User model by author ID.
@@ -69,6 +72,7 @@ class Post(models.Model):
         ordering = ["-created_on"]
     def __str__(self):
         return f"The title of this post is {self.title}"
+
 
 class Comment(models.Model):
     """
@@ -98,6 +102,8 @@ class Like(models.Model):
         unique_together = ('fk_post_id', 'fk_user_id')
     def __str__(self):
         return f"{self.fk_user_id} likes {self.fk_post_id}"
+    def total_likes(self):
+        return self.total_likes.count()
 
 
      
