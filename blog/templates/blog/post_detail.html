@@ -16,9 +16,8 @@
         </div>
         <div class="subject_txt">
             <p>{{ post.content | safe }}</p><br>
-            <!-- <i class="fa-solid fa-bookmark"></i> -->
         </div>
-        <!-- Displaying count of likes -->
+        <!-- Displaying thumbs up like button and count of likes -->
         <div class = feedback>
             <i class="fa-solid fa-thumbs-up" id="like-button" style="cursor:pointer;"></i> 
             <span id="like-count">{{ like_count }}</span>
