@@ -248,8 +248,8 @@ main {
 
 .subject_txt{
   width:90%;
-  border:7pt ridge #1408bf;
   margin: 10px;
+  text-align: start;
 }
 
 #like-button.liked {
@@ -291,6 +291,24 @@ main {
     
   } 
 
+/* Small devices (700px and down) */
+@media only screen and (max-width: 700px) { 
+  
+  #menu_banner {
+    display: none;
+  }
+  
+  .categories{
+    flex-direction: column;
+  }
+}   
+  
+  /* Mobile phone devices (453px and down) */
+  @media only screen and (max-width: 453px) { 
+         
+  #logo img{
+    max-height:90%;
+    max-width:90%;  
+  }
 
-
-   
+}
