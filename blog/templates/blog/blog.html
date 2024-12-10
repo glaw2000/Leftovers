@@ -2,9 +2,14 @@
 {% load static %}
 
 {% block content %}
-<!-- AllPosts page (blog.html) content starts here -->   
+<!-- Posts page (blog.html) content starts here -->   
 <div id="body" class="bodytxt" >
-    <h1>Posts</h1>
+    {% if current_ingredient == "Any" %}
+        <h1>All Posts</h1>
+    {% else %}
+        <h1>All Posts </h1>
+        <h2>(filtered by "{{current_ingredient}}")</h2>
+    {% endif %}
     <div class="categories"> 
     {% for post in items %}
         <div class="blog_cell">
