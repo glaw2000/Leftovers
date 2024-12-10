@@ -7,7 +7,7 @@
     {% if current_ingredient == "Any" %}
         <h1>All Posts</h1>
     {% else %}
-        <h1>All Posts </h1>
+        <a href="{% url 'blog_by_ingredient' ingredient='any' %}"><h1>All Posts </h1></a>
         <h2>(filtered by "{{current_ingredient}}")</h2>
     {% endif %}
     <div class="categories"> 
@@ -28,7 +28,10 @@
     {% empty %}
         <p>No posts to display</p>
     {% endfor %}
-        </div>
+    </div>
+    <div class="top_btn">
+        <a class="btn btn-primary" href="" role="button">Top</a>
+    </div>
     
     {% if is_paginated %}
         <nav aria-label="Page navigation">

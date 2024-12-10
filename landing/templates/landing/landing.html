@@ -13,6 +13,7 @@
     </p>
     
     <div class="categories" id="food_groups">
+        
         <div class="cell" id="meat">
             <a href="{% url 'blog_by_ingredient' ingredient='meat' %}">
                 <img src="{% static 'images/meat.webp' %}" alt="roast meat">
@@ -75,6 +76,10 @@
             </a>
             <p>Seasonal leftovers</p>
         </div>
-    </div>            
+    </div>
+
+    <div class="top_btn">
+        <a class="btn btn-primary" href="" role="button">Top</a>
+    </div>   
 </div>
 {% endblock content %}

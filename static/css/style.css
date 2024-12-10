@@ -140,9 +140,6 @@
   font-style: italic;
 }
 
-
-
-
 /* Body Styling */
 
 main {
@@ -204,6 +201,16 @@ main {
   padding-right: 10px;
 }
 
+.top_btn{
+   padding-bottom: 20px;
+   padding-left: 70vw;
+}            
+
+.btn{
+  color:yellow !important;
+  background-color: #1408bf;
+}
+
 /* blog.html All Posts page */
 .blog_cell {
   background-color: white;
@@ -224,6 +231,11 @@ main {
 
 .blog_cell a{
   text-decoration: none;
+}
+
+.page-link {
+  background-color: #1408bf;
+  color: yellow !important;
 }
 
 

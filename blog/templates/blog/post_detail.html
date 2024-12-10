@@ -17,6 +17,9 @@
         <div class="subject_txt">
             <p>{{ post.content | safe }}</p><br>
         </div>
+        <div class="top_btn">
+            <a class="btn btn-primary" href="" role="button">Top</a>
+        </div>
         <!-- Displaying like button and count of likes -->
         <div class = feedback>
             {% if user.is_authenticated %}
