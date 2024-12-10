@@ -41,6 +41,11 @@
   font-style: normal;
   width: 80%;
 }
+
+#headtxt a{
+  color:yellow;
+  text-decoration: none;
+}
   
 #burger{
   color:yellow;
