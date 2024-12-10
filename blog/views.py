@@ -3,20 +3,49 @@ from django.views.generic import ListView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect, JsonResponse
-from .models import Post, Comment, Like
+from .models import Post, Comment, Like, Ingredient
 from .forms import CommentForm
 
 # Create your views here.
 
 class AllPosts(ListView):
     """
-    Displays listing of all posts
+    Displays listing of all posts, filtered by ingredient if specified
     """
     model = Post
-    queryset = Post.objects.order_by("created_on")
+    # queryset = Post.objects.order_by("created_on")
     template_name = 'blog/blog.html'
     context_object_name = 'items'
     paginate_by = 9
+
+    # Map ingredient names to their respective integer values
+    ingredient_mapping = {
+        'any': 0,
+        'meat': 1,
+        'fish': 2,
+        'veg': 3,
+        'fruit': 4,
+        'dairy': 5,
+        'eggs': 6,
+        'bread': 7,
+        'grains': 8,
+        'seasonal': 9
+    }
+    def get_queryset(self):
+        ingredient = self.kwargs.get('ingredient', 'any').lower()
+        # Get the corresponding integer value for the ingredient
+        ingredient_value = self.ingredient_mapping.get(ingredient, 0)  # Default to 'any' (0)
+        
+        if ingredient_value == 0:  # 'any' selected, show all posts
+            return Post.objects.all().order_by("-created_on")
+        else:
+            return Post.objects.filter(ingredients__ingredient=ingredient_value).order_by("-created_on")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        ingredient = self.kwargs.get('ingredient', 'any').capitalize()
+        context['current_ingredient'] = ingredient
+        return context
 
 def post_detail(request, slug):
     """

@@ -8,69 +8,69 @@
     
     <p>
         If you're looking for inspiration and just want to browse through all posts then click here: 
-         <a href="{% url 'blog' %}">All posts</a>
+         <a href="{% url 'blog_by_ingredient' ingredient='any' %}">All posts</a>
          Otherwise, select what you have leftover and lets get cooking!
     </p>
     
     <div class="categories" id="food_groups">
         <div class="cell" id="meat">
-            <a href="{% url 'blog' %}">
+            <a href="{% url 'blog_by_ingredient' ingredient='meat' %}">
                 <img src="{% static 'images/meat.webp' %}" alt="roast meat">
             </a>
             <p>Meat</p>
         </div>
         
         <div class="cell" id ="fish">
-            <a href="{% url 'blog' %}">
+            <a href="{% url 'blog_by_ingredient' ingredient='fish' %}">
                 <img src="{% static 'images/fish.webp' %}" alt="fish">
             </a>
             <p>Fish</p>
         </div>
 
         <div class="cell" id ="veg">
-            <a href="{% url 'blog' %}">
+            <a href="{% url 'blog_by_ingredient' ingredient='veg' %}">
                 <img src="{% static 'images/veg.webp' %}" alt="vegetables">
             </a>
             <p>Vegetables</p>
         </div>
                 
         <div class="cell" id="fruit">
-            <a href="{% url 'blog' %}">
+            <a href="{% url 'blog_by_ingredient' ingredient='fruit' %}">
                 <img src="{% static 'images/fruit.webp' %}" alt="fruit bowl">
             </a>
             <p>Fruit</p>
         </div>
             
          <div class="cell" id ="dairy">
-            <a href="{% url 'blog' %}">
+            <a href="{% url 'blog_by_ingredient' ingredient='dairy' %}">
                 <img src="{% static 'images/dairy.webp' %}" alt="milk churn">
             </a>
             <p>Dairy</p>
         </div>
 
         <div class="cell" id ="eggs">
-            <a href="{% url 'blog' %}">
+            <a href="{% url 'blog_by_ingredient' ingredient='eggs' %}">
                 <img src="{% static 'images/eggs.webp' %}" alt="eggs">
             </a>
             <p>Eggs</p>
         </div>
                 
         <div class="cell" id="bread">
-            <a href="{% url 'blog' %}">
+            <a href="{% url 'blog_by_ingredient' ingredient='bread' %}">
                 <img src="{% static 'images/bread.webp' %}" alt="bread">
             </a>
             <p>Bread</p>
         </div>
             
-         <div class="cell" id ="rice">
-            <a href="{% url 'blog' %}">
+         <div class="cell" id ="grains">
+            <a href="{% url 'blog_by_ingredient' ingredient='grains' %}">
                 <img src="{% static 'images/grains.webp' %}" alt="grains">
             </a>
             <p>Grains and pulses</p>
         </div>
 
         <div class="cell" id ="seasonal">
-            <a href="{% url 'blog' %}">
+            <a href="{% url 'blog_by_ingredient' ingredient='seasonal' %}">
                 <img src="{% static 'images/seasonal.webp' %}" alt="confetti">
             </a>
             <p>Seasonal leftovers</p>

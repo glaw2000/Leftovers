@@ -17,6 +17,7 @@ class Ingredient(models.Model):
         (6, "eggs"),
         (7, "bread"),
         (8, "grains"),
+        (9, "seasonal"),
     ]
     
     ingredient = models.IntegerField(choices=INGREDIENT_CHOICES, default=0)
