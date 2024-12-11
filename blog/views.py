@@ -97,6 +97,15 @@ def post_detail(request, slug):
 
 @login_required
 def like_post(request, slug):
+    """
+    Toggles a like icon for post
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Post`.
+    ``like``
+        A like related to the post.
+    """
     post = get_object_or_404(Post, slug=slug)
     like, created = Like.objects.get_or_create(fk_post_id=post, fk_user_id = request.user)
     if not created:
