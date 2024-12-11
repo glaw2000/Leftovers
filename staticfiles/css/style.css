@@ -1,7 +1,7 @@
 /* Header Styling */
 #head {
   border-width: thick;
-  border-style: dotted;
+  border-style:dotted;
   border-color: yellow;
   background-color:#1408bf;
   display: flex;
@@ -57,15 +57,18 @@
   width: 20%;
   text-align: right;
 }
-
+  
+#burger i {
+  color:yellow;
+}
 #burger a {
   color:#1408bf;
-  padding-left: 10px;
+  padding-left:10px;
   text-decoration: none;
 }
-
+ 
 #menu { 
-  align-self: flex-end;
+  align-self:flex-end;
   text-align: center;
   width: 100%;
 }
@@ -84,7 +87,6 @@
 .form_left {
   text-align: left;
 }
-
 
 .btn-signup {
   background-color: #1408bf;
@@ -315,6 +317,10 @@ main {
   .categories{
     flex-direction: column;
   }
+
+  .cell img{
+    height: 200px;
+  }
 }   
   
   /* Mobile phone devices (453px and down) */
@@ -323,6 +329,10 @@ main {
   #logo img{
     max-height:90%;
     max-width:90%;  
+  }
+
+  .cell img{
+    height: 100px;
   }
 
 }
