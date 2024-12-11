@@ -229,6 +229,7 @@ main {
   display: block;
   margin-left:auto;
   margin-right: auto;
+  height: 150px;
   max-width: 50%; 
   padding-top: 5px;
 }
@@ -321,6 +322,10 @@ main {
   .cell img{
     height: 200px;
   }
+
+  .blog_cell img{
+    height: 200px;
+  }
 }   
   
   /* Mobile phone devices (453px and down) */
@@ -332,6 +337,10 @@ main {
   }
 
   .cell img{
+    height: 100px;
+  }
+
+  .blog_cell img{
     height: 100px;
   }
 
