@@ -25,9 +25,9 @@
         <!-- Displaying like button and count of likes -->
         <div class = feedback>
             {% if user.is_authenticated %}
-                <i class="fa-solid fa-thumbs-up fa-2x {% if user_has_liked %}liked{% endif %}" id="like-button" style="cursor:pointer;" aria-label="like post"></i> 
+                <i class="fa-solid fa-thumbs-up fa-2x {% if user_has_liked %}liked{% endif %}" id="like-button" style="cursor:pointer;" aria-label="post like selected"></i> 
             {% else %}
-                <i class="fa-solid fa-thumbs-up fa-2x" id="like-button" aria-label="remove like post"></i>
+                <i class="fa-solid fa-thumbs-up fa-2x" id="like-button" aria-label="post like not selected"></i>
             {% endif %} 
             <span id="like-count">{{ post.likes.count }}</span>
          </div>
