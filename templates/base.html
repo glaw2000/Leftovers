@@ -47,19 +47,19 @@
 
             <div id ="burger" >
                 <nav>
-                    <i class="fa-solid fa-bars fa-2x" id="dropdownMenu2"  role="button"  data-bs-toggle="dropdown" aria-expanded="false"></i>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li><a href="{% url 'home' %}">Home</a></li>
-                        <li><a href="{% url 'blog' %}">All Posts</a></li>
-                        <li><a href="{% url 'about' %}">About</a></li>
+                    <i class="fa-solid fa-bars fa-2x" id="dropdownMenu2"  role="button"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"></i>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" role="menu">
+                        <li><a href="{% url 'home' %}" role="menuitem">Home</a></li>
+                        <li><a href="{% url 'blog' %}" role="menuitem">All Posts</a></li>
+                        <li><a href="{% url 'about' %}" role="menuitem">About</a></li>
                         {% if user.is_authenticated %}
                             <li><a class="{% if request.path == logout_url %}active{% endif %}" aria-current="page" 
-                                href="{% url 'account_logout' %}">Log Out</a></li>                            
+                                href="{% url 'account_logout' %}" role="menuitem">Log Out</a></li>                            
                         {% else %}
                             <li><a class="{% if request.path == signup_url %}active{% endif %} register" aria-current="page" 
-                                href="{% url 'account_signup' %}">Register</a></li>
+                                href="{% url 'account_signup' %}" role="menuitem">Register</a></li>
                             <li><a class="{% if request.path == login_url %}active{% endif %}" aria-current="page" 
-                                href="{% url 'account_login' %}">Log In</a></li>
+                                href="{% url 'account_login' %}" role="menuitem">Log In</a></li>
                         {% endif %}    
                     </ul>                                
                 </nav>
