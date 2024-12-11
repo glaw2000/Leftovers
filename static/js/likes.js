@@ -1,4 +1,4 @@
-let csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value
+let csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
 
 document.addEventListener('DOMContentLoaded', function() {
     // code below will now only run when the DOM is fully loaded
@@ -25,7 +25,6 @@ function likePost(slug) {
     })
     .then(data => {
         const likeButton = document.getElementById('like-button');
-        const likeCount = document.getElementById('like-count');
         if (data.liked) {
             likeButton.classList.add('liked');
         } else {
