@@ -36,7 +36,6 @@
   align-self:center;
   text-align: center;
   font-family: "Roberto Mono", monospace;
-  font-optical-sizing: auto;
   font-style: normal;
   width: 80%;
 }
@@ -76,7 +75,6 @@
 #menu a {
   color:#1408bf;
   font-family: "Roberto Mono", monospace;
-  font-optical-sizing: auto;
   font-style: normal;
   padding-left: 10%;
   text-decoration: none;
@@ -160,7 +158,6 @@ main {
   color:#1408bf;
   text-align: center;
   font-family: "Roberto Mono", monospace;
-  font-optical-sizing: auto;
   font-style: normal;
 }
 
@@ -301,7 +298,6 @@ main {
     color:yellow;
     text-align: center;
     font-family: "Roberto Mono", monospace;
-    font-optical-sizing: auto;
     font-style: normal;
   }
   
