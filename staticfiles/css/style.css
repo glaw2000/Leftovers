@@ -1,7 +1,7 @@
 /* Header Styling */
 #head {
   border-width: thick;
-  border-style:dotted;
+  border-style: dotted;
   border-color: yellow;
   background-color:#1408bf;
   display: flex;
@@ -57,18 +57,15 @@
   width: 20%;
   text-align: right;
 }
-  
-#burger i {
-  color:yellow;
-}
+
 #burger a {
   color:#1408bf;
-  padding-left:10px;
+  padding-left: 10px;
   text-decoration: none;
 }
- 
+
 #menu { 
-  align-self:flex-end;
+  align-self: flex-end;
   text-align: center;
   width: 100%;
 }
