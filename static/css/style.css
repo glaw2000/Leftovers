@@ -60,6 +60,7 @@
   
 #burger i {
   color:yellow;
+  cursor: pointer;
 }
 #burger a {
   color:#1408bf;
