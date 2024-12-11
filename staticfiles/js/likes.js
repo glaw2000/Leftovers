@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Function below sends a POST request to like a blog post identified by unique postslug that is passed in from post_detail.html.
+// Fetch API makes HTTP request to the server.
+// Each time like button is clicked function checks if element already has a class of 'liked' then removes it
+// otherwise it sets class of 'liked' on element and increments like-count by one. The class of "clicked" also gets toggled to change the button color.
+
 function likePost(slug) {
     fetch(`/blog/${slug}/like/`,{
         method:'POST',
