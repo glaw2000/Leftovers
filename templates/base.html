@@ -49,17 +49,17 @@
                 <nav>
                     <i class="fa-solid fa-bars fa-2x" id="dropdownMenu2"  role="button"  data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true"></i>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" role="menu">
-                        <li><a href="{% url 'home' %}" role="menuitem">Home</a></li>
-                        <li><a href="{% url 'blog' %}" role="menuitem">All Posts</a></li>
-                        <li><a href="{% url 'about' %}" role="menuitem">About</a></li>
+                        <li><a href="{% url 'home' %}" {% if request.path == landing_url %}aria-current="page"{% endif %} role="menuitem">Home</a></li>
+                        <li><a href="{% url 'blog' %}" {% if request.path == blog_url %}aria-current="page"{% endif %} role="menuitem">All Posts</a></li>
+                        <li><a href="{% url 'about' %}" {% if request.path == about_url %}aria-current="page"{% endif %} role="menuitem">About</a></li>
                         {% if user.is_authenticated %}
-                            <li><a class="{% if request.path == logout_url %}active{% endif %}" aria-current="page" 
-                                href="{% url 'account_logout' %}" role="menuitem">Log Out</a></li>                            
+                            <li><a class="{% if request.path == logout_url %}active{% endif %}"  
+                                href="{% url 'account_logout' %}" {% if request.path == logout_url %}aria-current="page"{% endif %} role="menuitem">Log Out</a></li>                            
                         {% else %}
-                            <li><a class="{% if request.path == signup_url %}active{% endif %} register" aria-current="page" 
-                                href="{% url 'account_signup' %}" role="menuitem">Register</a></li>
-                            <li><a class="{% if request.path == login_url %}active{% endif %}" aria-current="page" 
-                                href="{% url 'account_login' %}" role="menuitem">Log In</a></li>
+                            <li><a class="{% if request.path == signup_url %}active{% endif %} register" 
+                                href="{% url 'account_signup' %}" {% if request.path == signup_url %}aria-current="page"{% endif %} role="menuitem">Register</a></li>
+                            <li><a class="{% if request.path == login_url %}active{% endif %}" 
+                                href="{% url 'account_login' %}" {% if request.path == login_url %}aria-current="page"{% endif %} role="menuitem">Log In</a></li>
                         {% endif %}    
                     </ul>                                
                 </nav>
@@ -71,17 +71,17 @@
             <div id="menu_banner">
                 <div id="menu">
                     <h2>
-                        <a href="{% url 'home' %}">Home</a>
-                        <a href="{% url 'blog' %}">All Posts</a>
-                        <a href="{% url 'about' %}">About</a>
+                        <a href="{% url 'home' %}" {% if request.path == landing_url %}aria-current="page"{% endif %}>Home</a>
+                        <a href="{% url 'blog' %}" {% if request.path == blog_url %}aria-current="page"{% endif %}>All Posts</a>
+                        <a href="{% url 'about' %}" {% if request.path == about_url %}aria-current="page"{% endif %}>About</a>
                         {% if user.is_authenticated %}
-                            <a class="{% if request.path == logout_url %}active{% endif %}" aria-current="page" 
-                            href="{% url 'account_logout' %}">Log Out</a>
+                            <a class="{% if request.path == logout_url %}active{% endif %}"  
+                            href="{% url 'account_logout' %}" {% if request.path == logout_url %}aria-current="page"{% endif %}>Log Out</a>
                         {% else %}
-                            <a class="{% if request.path == signup_url %}active{% endif %} register" aria-current="page" 
-                            href="{% url 'account_signup' %}">Register</a>
-                            <a class="{% if request.path == login_url %}active{% endif %}" aria-current="page" 
-                            href="{% url 'account_login' %}">Log In</a>   
+                            <a class="{% if request.path == signup_url %}active{% endif %} register"  
+                            href="{% url 'account_signup' %}" {% if request.path == signup_url %}aria-current="page"{% endif %}>Register</a>
+                            <a class="{% if request.path == login_url %}active{% endif %}" 
+                            href="{% url 'account_login' %}" {% if request.path == login_url %}aria-current="page"{% endif %}>Log In</a>   
                         {% endif %}
                     </h2>
                 </div>
