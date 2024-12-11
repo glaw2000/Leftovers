@@ -2,7 +2,9 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-<div id="body" class="bodytxt" >  
+
+<div id="body" class="bodytxt" >
+        
     <!-- Displaying Post -->
     <div class="post">
         <h2> {{ post.title }}</h2>
@@ -109,6 +111,7 @@
     
 </div>  
 
+<!-- Start of code for ikes feature -->
 {% csrf_token %}
 
 <script>
@@ -116,9 +119,11 @@
 </script>
 
 <script src="{% static 'js/likes.js' %}"></script>       
-
+<!-- End of code for likes feature -->
+ 
 {% endblock content %}
 
+<!-- comments feature code -->
 {% block extras %}
 <script src="{% static 'js/comments.js' %}"></script>
 {% endblock %}

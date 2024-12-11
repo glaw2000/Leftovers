@@ -1,12 +1,12 @@
-let csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value
+let csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
 
 document.addEventListener('DOMContentLoaded', function() {
     // code below will now only run when the DOM is fully loaded
-        document.getElementById('like-button').addEventListener('click', function() 
-        {
-            likePost(postSlug);
-        });
+    document.getElementById('like-button').addEventListener('click', function() 
+    {
+        likePost(postSlug);
     });
+});
 
 function likePost(slug) {
     fetch(`/blog/${slug}/like/`,{
@@ -19,13 +19,12 @@ function likePost(slug) {
     })
     .then(response => {
         if(!response.ok) {
-            return response.text().then(text=> {throw new Error(text)});
+            return response.text().then(text=> {throw new Error(text);});
         }
         return response.json();
     })
     .then(data => {
         const likeButton = document.getElementById('like-button');
-        const likeCount = document.getElementById('like-count');
         if (data.liked) {
             likeButton.classList.add('liked');
         } else {

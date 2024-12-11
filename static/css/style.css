@@ -91,13 +91,12 @@
 
 .btn-signup {
   background-color: #1408bf;
-  color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #1408bf;
+    color: #1408bf !important;
 }
 
 /* styling for comments forms and messages */
@@ -246,6 +245,7 @@ main {
 
 
 /* styling post_detail page  */
+
 .post {
   display: flex;
   flex-direction: column;
