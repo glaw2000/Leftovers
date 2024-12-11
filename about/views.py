@@ -4,6 +4,6 @@ from django.views.generic import TemplateView
 
 class About(TemplateView):
     """
-    Displays posts page
+    Displays About page
     """
     template_name = 'about/about.html'
