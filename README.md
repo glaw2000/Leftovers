@@ -1,6 +1,11 @@
-# Title 
-Live site link : https://leftovers-app-32aa0915dd0b.herokuapp.com/
+# Lets Do Leftovers 
 
+![picture alt](documentation/test%20results/am%20I%20responsive.png)
+
+Live site link : https://leftovers-app-32aa0915dd0b.herokuapp.com/ <br>
+
+For Admin access with relevant sign-in information: <br>
+https://leftovers-app-32aa0915dd0b.herokuapp.com/admin
 
 ## Overview
 This is a full stack application that stores and presents blog posts, ingredient information, user like numbers, user details and user comments. This site was developed using a django framework for a capstone project during a Full Stack Development Bootcamp run by Code Institute. 
@@ -232,7 +237,7 @@ During the design phase I used lucid chart to draft out my proposed database sch
 ![picture alt](documentation/erd/ERD.png)
 All the planned tables and relationships were implemented along with the future category table.
 
-## Features Implementation
+## Feature Implementation
 
 ### Core Features (Must-Haves User Stories)
 
@@ -290,7 +295,7 @@ Partially implemented
 Although it may seem odd to partially implement a could have user story before all the should haves user stories, the reason for doing this was two fold. To avoid future corruption of the database by adding a new field into the post model at a later date when it became populated. The backend table to enable this feature has been implemented as has the field in the Post model. In a future dev cycle it would not take much effort to use this information in the front for the user to filter posts by (like is currently offered for by ingredient). Secondly, the work to get this set up in the backend was so similar to the work done for the filter by ingredient type user story that it was extremely 'doable' in the time given for this dev cycle. Starting the bookmark user stories, which really would need both to be implemented for a good user experience, would not have got finished in the time available.
 
 
-# Technologies & Languages Used
+## Technologies & Languages Used
 
 - HTML
 - CSS
@@ -306,7 +311,7 @@ Although it may seem odd to partially implement a could have user story before a
 - [WAVE](https://wave.webaim.org/) to evaluate the accessibility of the site.
 - [Lucid Chart](https://www.lucidchart.com/pages/) used ERD feature to plan database structure
 
-## Libraries & Frameworks
+### Libraries & Frameworks
 
 - Bootstrap v5.0.1
 - Django v4.2.16
@@ -320,15 +325,46 @@ Further information is available in the [requirements.txt file](requirements.txt
 ## Testing and Validation
 
 ### Testing Results
-Manual testing ......
+Manual testing of the site was ongoing throughout the development process. 
+A lot of issues were faced getting the like feature to work but with research online and help from code institute coding coach they were resolved. 
 
-Screen responsive testing ..... 
+There was an issue found during testing a comment addition.
+A user's comment was being duplicated in draft form when the user refreshed the screen after submitting a comment. Fixed this by importing redirect from django shortcuts at the top of my views.py file  and then adding a return redirect to the post_detail view. On re-test this was no longer an issue, user was returned to the post_detail screen with the comment form on and their unapproved comment was not duplicated. 
 
-Issues were faced with .....
+Manual test results
+- Test that an admin user can add posts with an image using the admin dashboard - pass
+- Test that an admin user can edit previous posts using the admin dashboard - pass
+- Test that an admin user can delete posts using the admin dashboard - pass
+- Test that an admin user can add users using the admin dashboard- pass
+- Test that an admin user can delete users using the admin dashboard- pass
+- Test that an admin user can add their own comments to posts using the admin dashboard - pass
+- Test that and admin user can edit their own comments to posts using the admin dashboard - pass
+- Test that and admin user can delete their own comments to posts using the admin dashboard - pass
+- Test that and admin user can edit comments from other users on posts using the admin dashboard - pass
+- Test that and admin user can delete comments from other users on posts using the admin dashboard - pass
+- Test on page load that the home page loads without overflow on screensizes of 320px wide and upwards - pass
+- Test that a user can click on any link on the home page and is taken to the correct linked page - pass
+- Test that the nav burger menu drops down when clicked on - pass
+- Test that all items in the nav burger menu are selectable and take the user to the correct destination - pass
+- Test that when a user clicks on the All Posts link that a page showing all posts is presented - pass 
+- Test that when a user clicks on an ingredient category from the home page that the posts of only that category are displayed - pass
+- Test that when a user clicks on About that the About page loads with an image and about text - pass
+- Test that when a user selects a post from a new tab opens showing that post. The original list of posts (either all or filtered list depending on how user navigated to the post) remains open. - Pass
+- Test that users can register on the site and get an information message on success or fail - pass
+- Test that a registered user can sign in and receives a success message - pass
+- Test that a signed in user can sign out and gets a check and confirmation on doing so - pass
+- Test that a logged in user can add a comment to a post - pass
+- Test that admin can approve comments in the admin dashboard - pass
+- Test that a logged in user can edit their comment - pass
+- Test that a logged in user can delete their own comment - pass
+- Test that admin can delete any users comment - pass
+- Test that a non registered user can not add comments to posts - pass
+- Test that when a logged in user clicks on the like (thumbs up icon) button at the bottom of a post the thumb turns green and the count of likes is incremented by 1 - pass
+- Test that when as logged in user clicks on the like (thumbs up icon) button at the bottom of a post the thumb turns back to blue and the cound of likes is decremented by 1 - pass
+- Test that the like button continues to toggle between green and blue and the count goes up by 1 and down by 1 respectively for all future clicks by a logged in user - pass
+- Test that a second logged in user can like a post and the count is added to the existing count of  likes for that post - pass
+- Test that a user that is not logged in cannot alter the colour or the count of likes on a  post by clicking the like button - pass
 
-Manual test results 
-- Title of test - pass / fail
-Found comments duplicating in draft form if user refreshed screen after submitting a comment. 
 
 
 - Responsiveness was tested thoughout using chrome dev tools which enabled me to view the site on different devices as well as by specific width and height viewport settings.
@@ -526,6 +562,8 @@ This was great practice of working through a sw dev cycle to deliver an MVP in a
 - https://pep8ci.herokuapp.com/ Python linter to validate code
 - Chrome Dev tools lighthouse for testing performance and accessibility of site
 - https://wave.webaim.org/ to test accessibility of site
+- https://www.lucidchart.com/pages/  for drafting Entity Relationship Diagram of database
+- https://ui.dev/amiresponsive to show responsivity view of site
 
 
 ## Future Improvements
