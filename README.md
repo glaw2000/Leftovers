@@ -565,6 +565,9 @@ This was great practice of working through a sw dev cycle to deliver an MVP in a
 - https://wave.webaim.org/ to test accessibility of site
 - https://www.lucidchart.com/pages/  for drafting Entity Relationship Diagram of database
 - https://ui.dev/amiresponsive to show responsivity view of site
+- Google search function and Perplexity
+- [Django documentation](https://docs.djangoproject.com/en/5.1/)
+- [Stack Overflow](https://stackoverflow.com/)
 
 
 ## Future Improvements
