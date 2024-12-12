@@ -135,7 +135,7 @@ As a registered users I want to be able to delete a comment I have made about po
 
 ### Could-Have User Stories
 **View Posts by Meal Type:**<br/>
-As a user I want to view the blog posts by meal ** so that I can filter the view of posts by the meal I want to prepare. </br>
+As a user I want to view the blog posts by meal type so that I can filter the view of posts by the meal I want to prepare. </br>
 **Acceptance Criteria:**
 - User can select a meal type (eg breakfast/lunch/dinner/snacks....) to present them with a list of all posts related to that meal type
 <pre></pre>
@@ -205,9 +205,7 @@ Implemented - an admin user can accept or reject comment submissions from user a
 **Branding:**<br/>
 Implemented -  the Blog has consistent layouts between pages, consistent design elements and writing style and reflects author's passion of using up leftover food and avoiding waste as detailed on the About page.
 
-### Optional Features (Could-Have User Stories)
-- **User Story # and title:** 
-Implemented .....
+### Optional Features (Should-Have User Stories)
 
 **Like Posts:**<br/>
 Implemented - a registered user is able to click on a thumbs up icon next to each post to show they like it
@@ -226,8 +224,9 @@ Implemented - a logged in user is able to edit their comments they have made on 
 Implemented a logged in user is able to delete their comments they have made on posts 
 
 ### Optional Features (Should-Have User Stories)
-- **User Story # and title:** 
-Implemented .....
+**View Posts by Meal Type:** 
+Partially implemented 
+The backend table to enable this feature has been implemented as has the field in the Post model. The reason for this was to avoid future corruption of the database by adding a new field into the post model once it had been populated. In a future dev cycle it would not take much effort to use this information in the front for the user to filter posts by (like is currently offered for by ingredient). 
 
 ## Testing and Validation
 
