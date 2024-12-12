@@ -291,9 +291,8 @@ Responsiveness tesing using dev tools.
 ### Validation
 All validation result screenshots are in the following folder: /documentation/test results of this repository and summarised below:
 
-- https://jsfiddle.net/ test details
-
-- https://validator.w3.org/#validate_by_input  test details
+- Using https://validator.w3.org/#validate_by_input each of the template pages I had created or updated was validated. I incurred one error on the post_detail page due to the text of the blog post input in the text editor by the blog post author was causing the validator to think there were an uneven number of opening and closing p tags. This was resolved on advice from a peer on the course (thanks Ricky Smithson) by placing my post.content template variable inside my div directly and not within p tags.
+- I incurred one warning about the aria label for the like button on the post_detail page. This has remained unresolved after trying several combinations to describe the thumbs up button a user can press on a post. The label is a succinct and descriptive as I could think of. 
 
 - https://jigsaw.w3.org/css-validator/ test details
 
