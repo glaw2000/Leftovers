@@ -6,7 +6,7 @@ Live site link : https://leftovers-app-32aa0915dd0b.herokuapp.com/
 ......
 
 ### Purpose
-The purpose of this blog is to provide readers with advice, ideas and inspiration for what to do with leftover food to help cut down on food waste and save people money.
+The purpose of this blog is to provide readers with advice, ideas and inspiration for what to do with leftover food to help cut down on food waste and save people money. It is not intended to be a recipe site.
 
 ## User Stories
 
@@ -151,26 +151,61 @@ As a user I want to be able to sort the listing of posts by certain criteria so 
 ## Design Decisions
 
 ### Wireframes
-Aim of design and why design decisions were made ....
+I wanted the design of this site to be visually impactful but simple to navigate and not over complicated. 
 
-Designed mobile first and used flex boxes so that the display would  with the following wireframes:
+Designed mobile first and used flex boxes so that the display would with the following wireframes:
+![picture alt](/documentation/wireframes/home_page.png)
+![picture alt](/documentation/wireframes/listings_page.png)
+![picture alt](/documentation/wireframes/post_page.png)
+![picture alt](/documentation/wireframes/about_page.png)
 
+The login, logout and register pages were handled by allauth and I just updated the colours of the text and buttons to match my chosen colour theme.
 
-The following colour theme was generated using ..... 
+During development and testing I realised that the images and text was too cramped when presented in a 3 x 3 layout. The 3 x 3 layout worked well on desktops and laptops so I used a media query to change the display to be a column of 1 on smaller devices. 
+
+The colour theme of blue and yellow was chosen because the yellow is bright and cheerful and makes an impact and the blue is a great contrasting colour that meets accessibility requirements. No tool was used to generate the theme.
 
 
 
 ### Accessibility Considerations
-..... 
+Colours were tested through lighthouse for accessibility. 
+All images have aria labels and buttons and menus have been given roles so screenreaders can intrpret these elements.
 
 ## Features Implementation
 
 ### Core Features (Must-Haves User Stories)
-- **User Story # - User Story Title :** 
-Implemented..... 
 
-- **User Story # - User Story Title :** 
-Implemented..... 
+**User Management:**<br/>
+Implemented - the site administrator can grant, modify or delete user accounts using the admin dashboard</br>
+
+**Author Submission of Posts:**<br/>
+Implemented - using the admin dashboard the author of the blog can post to the site with images and these posts can be viewed by anyone.
+
+**Author Edit and Delete Posts**<br/>
+Implemented - using the admin dashboard the author of the blog site can update or delete posts</br>
+
+**View All Posts:**<br/>
+Implemented - a general site user can view the blog posts. The Home page is presented to user for them to click through to a listing of all posts. From post listings, user can choose a post to read in full. The site is consistent with inbuilt navigation links and is responsive on all devices
+
+**View Poast by Leftover Type:**<br/>
+Implemented - a user can select a food type from the home page to take them to a list of all posts related to that food type
+
+**User Add Comments:**<br/>
+Implemented - a logged in user has the option to comment on each post; see the comments they have made below each post and see if their comment has been approved for display to all
+
+**User View Comments:**<br/>
+Implemented - a registered users is able to see all approved comments under each post
+<pre></pre>
+
+**Author Reply to Comments:**<br/>
+Implemented - the author can reply to comments on posts by leaving a written comment when logged in.
+<pre></pre> 
+
+**Manage Comments:**<br/>
+Implemented - an admin user can accept or reject comment submissions from user and create, edit and delete comments. Only the user that has written the comment can view that comment in 'draft' state. All users can only view comments by other members once they have been approved by the site admin and published.
+
+**Branding:**<br/>
+Implemented -  the Blog has consistent layouts between pages, consistent design elements and writing style and reflects author's passion of using up leftover food and avoiding waste as detailed on the About page.
 
 ### Optional Features (Could-Have User Stories)
 - **User Story # and title:** 
