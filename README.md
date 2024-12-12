@@ -3,7 +3,7 @@ Live site link : https://leftovers-app-32aa0915dd0b.herokuapp.com/
 
 
 ## Overview
-......
+This is a full stack application that stores and presents blog posts, ingredient information, user like numbers, user details and user comments. This site was developed using a django framework. 
 
 ### Purpose
 The purpose of this blog is to provide readers with advice, ideas and inspiration for what to do with leftover food to help cut down on food waste and save people money. It is not intended to be a recipe site.
@@ -41,7 +41,7 @@ As a general site user I want to view the blog posts with ease so that I can fin
 - Site is responsive on all devices
 <pre></pre>
 
-**View Poast by Leftover Type:**<br/>
+**View Post by Leftover Type:**<br/>
 As a user I want to view the blog posts by food category so that I can filter the view of posts to only those relevant to the leftovers I have.</br>
 **Acceptance Criteria:**
 - User can select a food type from the home page to take them to a list of all posts related to that food type
@@ -147,6 +147,49 @@ As a user I want to be able to sort the listing of posts by certain criteria so 
 - A user is able to sort posts by date updated on
 - A user is able to sort posts by most liked
 - A user is able to sort posts by what is currently trending ie most viewed in a current time range
+
+### Won't-Have User Stories
+**Community board:**<br/>
+As a registered user I want to be able to post onto a community board within the site so that I and other users can share thoughts, ideas and experiences with regards to leftovers and the blog.</br>
+**Acceptance Criteria:**
+- An area in the site where registered users can post text and photos to.
+- An area in the site where registered users can read posts by other users
+<pre></pre>
+
+**Video content:**<br/>
+As the blog author I want to be able to add videos to my posts so that I can share step by step videos showing how I use up leftovers  </br>
+**Acceptance Criteria:**
+- Author is able to upload video to each blog post they create
+- Users are able to watch videos embedded in the blog posts
+<pre></pre>
+
+**Social Sharing:**<br/>
+As a user I want to be able to to click on social media buttons for each post so that I can easily share posts across platforms like Pinterest, Instagram and Facebook  </br>
+**Acceptance Criteria:**
+- Have social media buttons under/next to each post
+- User can click on a posts social media button and it will allow them to re-post the blog post on their feed.
+<pre></pre>
+
+**Post Rating:**<br/>
+As a user I want to **be able to rate a post ** so that I can share my view of how good a post is with others  </br>
+**Acceptance Criteria:**
+- Start rating system of 1-5 can be selected by user next to each post
+- Other users and the author are able to see an average star rating next to each post
+<pre></pre>
+
+**Search Posts:**<br/>
+As a registered users I want to **be able to search all posts ** so that I can easily find posts relevant to me</br>
+**Acceptance Criteria:**
+- A logged in user is able to enter a string into a search box and search all posts
+- A logged in user will receive a lists of post results relevant to their search
+<pre></pre>
+
+**Share posts:**<br/>
+As a registered users I want to share posts so that I can send posts to my contacts that may interest them  </br>
+**Acceptance Criteria:**
+- A logged in user has the option to share any post with their contacts
+- A logged in user receives confirmation that the post they shared has been sent to the contacts they chose 
+<pre></pre>
 
 ## Design Decisions
 
