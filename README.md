@@ -310,7 +310,16 @@ Post (post_detail.html) page validation with Error resolved
 ![picture alt](/documentation/test%20results/likes%20js%20file%20-%20jshint%20report.png)
 ![picture alt](/documentation/test%20results/comments%20js%20file%20-%20jshint%20report.png)
 
-- Using https://pep8ci.herokuapp.com/  the following Python files were validated and passed once the errors around either too much white space or not enough, and a few lines being too long, were resolved.
+- Using https://pep8ci.herokuapp.com/  the Python files created or modified by myself were validated. All passed once the errors around either too much white space or not enough, and a few lines being too long, were resolved.
+
+| Feature | admin.py | forms.py | models.py | urls.py | views.py |
+|---------|----------|----------|-----------|---------|----------|
+| config  | na | na | na | [no errors](documentation/test%20results/config%20urls%20py%20file%20validated.png) | na |
+| landing | na | na | na | [no errors](documentation/test%20results/landing%20urls%20py%20file%20validated.png) | [no errors](documentation/test%20results/landing%20views%20py%20file%20validated.png) |
+| about | na  | na  | na | [no errors](documentation/test%20results/about%20urls%20py%20file%20validated.png) | [no errors](documentation/test%20results/about%20views%20py%20file%20validated.png) | 
+| blog | [no errors](documentation/test%20results/blog%20admin%20py%20file%20validated.png) | [no errors](documentation/test%20results/blog%20forms%20py%20file%20validated.png) | [no errors](documentation/test%20results/blog%20models%20py%20file%20validated.png) | [no errors](documentation/test%20results/blog%20urls%20py%20file%20validated.png) | [no errors](documentation/test%20results/blog%20views%20py%20file%20re-validated%20after%20redirect%20added.png) |
+
+
 
 
 - Dev tools lighthouse report summary :
@@ -458,6 +467,7 @@ This was great practice of working through a sw dev cycle to deliver an MVP in a
 - Code Institute course materials and trainers - especially Amy Richardson, John Rearden and Mark Briscoe.
 - https:djecrety.ir was used to generate a secret key
 - pixaby.com for free vectors and images
+- convertio.co for image compression
 - google fonts for Roberto mono font used throughout the site
 - https://validator.w3.org/#validate_by_input  for validating html
 - https://jigsaw.w3.org/css-validator/ for validating css
