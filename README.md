@@ -3,7 +3,7 @@ Live site link : https://leftovers-app-32aa0915dd0b.herokuapp.com/
 
 
 ## Overview
-This is a full stack application that stores and presents blog posts, ingredient information, user like numbers, user details and user comments. This site was developed using a django framework. 
+This is a full stack application that stores and presents blog posts, ingredient information, user like numbers, user details and user comments. This site was developed using a django framework for a capstone project during a Full Stack Development Bootcamp run by Code Institute. 
 
 ### Purpose
 The purpose of this blog is to provide readers with advice, ideas and inspiration for what to do with leftover food to help cut down on food waste and save people money. It is not intended to be a recipe site.
@@ -37,7 +37,7 @@ As a general site user I want to view the blog posts with ease so that I can fin
 **Acceptance Criteria:**
 - Home page presented to user for them to click through to a listing of all posts
 - From post listings, user can choose a post to read in full
-- Site is consistent with inbuilt navigation links
+- Site is consistent with in-built navigation links
 - Site is responsive on all devices
 <pre></pre>
 
@@ -48,7 +48,7 @@ As a user I want to view the blog posts by food category so that I can filter th
 <pre></pre>
 
 **User Add Comments:**<br/>
-As a registered users I want to be able to submit comments about posts so that I can interact with the author and share my thoughts and ideas with other users</br>
+As a registered user I want to be able to submit comments about posts so that I can interact with the author and share my thoughts and ideas with other users</br>
 **Acceptance Criteria:**
 - A logged in user has the option to comment on each post
 - A logged in user can see the comments they have made below each post
@@ -56,7 +56,7 @@ As a registered users I want to be able to submit comments about posts so that I
 <pre></pre>
 
 **User View Comments:**<br/>
-As a registered users I want to be able to view peoples' comments about posts so that I can read their thoughts and ideas about posts</br>
+As a registered user I want to be able to view peoples' comments about posts so that I can read their thoughts and ideas about posts</br>
 **Acceptance Criteria:**
 - A logged in user is able to see all approved comments under each post
 <pre></pre>
@@ -127,7 +127,7 @@ As a registered users I want to be able to edit comments I have made about posts
 <pre></pre>
 
 **User Deletion of Comments:**<br/>
-As a registered users I want to be able to delete a comment I have made about posts so that I can manage my interactions with the author and other users </br>
+As a registered user I want to be able to delete a comment I have made about posts so that I can manage my interactions with the author and other users </br>
 **Acceptance Criteria:**
 - A logged in user is able to delete their comments they have made on posts 
 <pre></pre>
@@ -178,14 +178,14 @@ As a user I want to **be able to rate a post ** so that I can share my view of h
 <pre></pre>
 
 **Search Posts:**<br/>
-As a registered users I want to **be able to search all posts ** so that I can easily find posts relevant to me</br>
+As a registered user I want to **be able to search all posts ** so that I can easily find posts relevant to me</br>
 **Acceptance Criteria:**
 - A logged in user is able to enter a string into a search box and search all posts
 - A logged in user will receive a lists of post results relevant to their search
 <pre></pre>
 
 **Share posts:**<br/>
-As a registered users I want to share posts so that I can send posts to my contacts that may interest them  </br>
+As a registered user I want to share posts so that I can send posts to my contacts that may interest them  </br>
 **Acceptance Criteria:**
 - A logged in user has the option to share any post with their contacts
 - A logged in user receives confirmation that the post they shared has been sent to the contacts they chose 
@@ -196,19 +196,17 @@ As a registered users I want to share posts so that I can send posts to my conta
 ### Wireframes
 I wanted the design of this site to be visually impactful but simple to navigate and not over complicated. 
 
-Designed mobile first and used flex boxes so that the display would with the following wireframes:
+Designed mobile first and with the idea of using flex boxes so that the display would scale responsively. The following wireframes show the initial design idea:
 ![picture alt](/documentation/wireframes/home_page.png)
 ![picture alt](/documentation/wireframes/listings_page.png)
 ![picture alt](/documentation/wireframes/post_page.png)
 ![picture alt](/documentation/wireframes/about_page.png)
 
-The login, logout and register pages were handled by allauth and I just updated the colours of the text and buttons to match my chosen colour theme.
+The login, logout and register pages were going to be handled by allauth so these were not drafted out as wirefranes. Once created in the app I just updated the colours of the text and buttons to match my chosen colour theme.
 
-During development and testing I realised that the images and text was too cramped when presented in a 3 x 3 layout. The 3 x 3 layout worked well on desktops and laptops so I used a media query to change the display to be a column of 1 on smaller devices. 
+During development and testing I realised that the images and text were too cramped when presented in a 3 x 3 layout. The 3 x 3 layout worked well on desktops and laptops so I used a media query to change the display to be a column of 1 on smaller devices. 
 
 The colour theme of blue and yellow was chosen because the yellow is bright and cheerful and makes an impact and the blue is a great contrasting colour that meets accessibility requirements. No tool was used to generate the theme.
-
-
 
 ### Accessibility Considerations
 Colours were tested through lighthouse for accessibility. 
@@ -228,16 +226,16 @@ Implemented - using the admin dashboard the author of the blog can post to the s
 Implemented - using the admin dashboard the author of the blog site can update or delete posts</br>
 
 **View All Posts:**<br/>
-Implemented - a general site user can view the blog posts. The Home page is presented to user for them to click through to a listing of all posts. From post listings, user can choose a post to read in full. The site is consistent with inbuilt navigation links and is responsive on all devices
+Implemented - a general site user can view the blog posts. The Home page is presented to user for them to click through to a listing of all posts. From post listings, user can choose a post to read in full. The site is consistent with inbuilt navigation links and is responsive on all devices.
 
 **View Poast by Leftover Type:**<br/>
-Implemented - a user can select a food type from the home page to take them to a list of all posts related to that food type
+Implemented - a user can select a food type from the home page to take them to a list of all posts related to that food type.
 
 **User Add Comments:**<br/>
-Implemented - a logged in user has the option to comment on each post; see the comments they have made below each post and see if their comment has been approved for display to all
+Implemented - a logged in user has the option to comment on each post; see the comments they have made below each post and see if their comment has been approved for display to all.
 
 **User View Comments:**<br/>
-Implemented - a registered users is able to see all approved comments under each post
+Implemented - a registered users is able to see all approved comments under each post.
 
 **Author Reply to Comments:**<br/>
 Implemented - the author can reply to comments on posts by leaving a written comment when logged in.
@@ -251,25 +249,25 @@ Implemented -  the Blog has consistent layouts between pages, consistent design 
 ### Optional Features (Should-Have User Stories)
 
 **Like Posts:**<br/>
-Implemented - a registered user is able to click on a thumbs up icon next to each post to show they like it
+Implemented - a registered user is able to click on a thumbs up icon next to each post to show they like it.
 
 **User Feedback:**<br/>
 Implemented -  the author can receive feedback on posts through users being able to 
 leave comments and show if they like a post. A count of user likes next to each post can also be seen by the author. 
 
 **About Author:**<br/>
-Implemented - About section in the site has information about the author their passion of the blog subject. There is place for a photo of the author
+Implemented - About section in the site has information about the author their passion of the blog subject. There is place for a photo of the author.
 
 **User Edit of Comments:**<br/>
-Implemented - a logged in user is able to edit their comments they have made on posts and see their edited comment below the post. Approved edited comments can be viewed by all users
+Implemented - a logged in user is able to edit their comments they have made on posts and see their edited comment below the post. Approved edited comments can be viewed by all users.
 
 **User Deletion of Comments:**<br/>
-Implemented a logged in user is able to delete their comments they have made on posts 
+Implemented a logged in user is able to delete their comments they have made on posts. 
 
-### Optional Features (Should-Have User Stories)
+### Optional Features (Could-Have User Stories)
 **View Posts by Meal Type:** 
 Partially implemented 
-The backend table to enable this feature has been implemented as has the field in the Post model. The reason for this was to avoid future corruption of the database by adding a new field into the post model once it had been populated. In a future dev cycle it would not take much effort to use this information in the front for the user to filter posts by (like is currently offered for by ingredient). 
+Although it may seem odd to partially implement a could have user story before all the should haves user stories, the reason for doing this was two fold. To avoid future corruption of the database by adding a new field into the post model at a later date when it became populated. The backend table to enable this feature has been implemented as has the field in the Post model. In a future dev cycle it would not take much effort to use this information in the front for the user to filter posts by (like is currently offered for by ingredient). Secondly, the work to get this set up in the backend was so similar to the work done for the filter by ingredient type user story that it was extremely 'doable' in the time given for this dev cycle. Starting the bookmark user stories, which really would need both to be implemented for a good user experience, would not have got finished in the time available.
 
 ## Testing and Validation
 
@@ -437,21 +435,31 @@ To start the deployment process , please follow the below steps:
 
 
 ## Credits
-- README headings copied from a previous student hackathon (https://joanne1980.github.io/Name-the-animal/) that I worked. Original template created by Brian O Grady (github Mrbrianojee), Programme Director at Code Institute.
-- Deployment details in README were copied and adapted from a past project created by Code Institute facilitator's Amy Richardson (https://freefido.herokuapp.com/)
+- README headings copied from a previous student hackathon (https://joanne1980.github.io/Name-the-animal/) that I worked on in a team. Original template created by Brian O Grady (github Mrbrianojee), Programme Director at Code Institute.
+- Deployment details in README were copied and adapted from a past project created by Code Institute facilitator Amy Richardson (https://freefido.herokuapp.com/)
+- Code Institute course materials and trainers - especially Amy Richardson, John Rearden and Mark Briscoe.
+- https:djecrety.ir was used to generate a secret key
+- pixaby.com for free vectors and images
+- google fonts for Roberto mono font used throughout the site
+
 
 ## Future Improvements
-- Fix ....
-- Enhance ...
-**Bookmark Posts:**<br/>
-As a registered users I want to bookmark my favourite posts so that I can easily access specific posts of interest to me </br>
-**Acceptance Criteria:**
-- A logged in user has the option to bookmark each post
-- A logged in user can see all their bookmarked posts listed in once place
-<pre></pre>
+### Fixes
+- Fix Image sizing of images. All images were converted to webp and compressed but the light house report suggests this is an area where further improvement could be made. The css styling if the image elements could be improved too.
 
-**Remove Bookmarks:**<br/>
-As a registered users I want to to be able to remove bookmarks so that I can manage my bookmarked list of posts </br>
-**Acceptance Criteria:**
-- A logged in user has the option to remove their bookmark from any previously bookmarked post
-<pre></pre>
+- Fix the aria label on the post like button. Several variations were tried but nothing that the HTML validator liked.
+
+### Enhancements
+Having trending post information on the landing page could be a nice future enhancement based on the like count that is already implemented.<br>
+I would also like to change the way the user comments work. If a user makes a comment and it gets approved the comment is visible to all. It the user then clicks to edit that comment, regardless of if they make any changes to it or not, the comment automatically goes back into an un approved state and is removed from view to everyone other than the user who wrote it and admin. It would be nice to leave the original on screen. 
+The following non implemented user stories could be developed in future dev cycles:
+- Add and Remove Bookmarks of posts
+- View Posts by Meal Type
+- Sort capability for viewing post listings
+- Community board
+- Capability for author to upload Video content to posts
+- Capability for users to share posts via social media or with their contacts
+- Capability for users to rate posts on a scale 1 -5
+- Capability to be able to search for certain posts<br>
+
+
