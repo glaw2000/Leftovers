@@ -289,6 +289,34 @@ Implemented a logged in user is able to delete their comments they have made on 
 Partially implemented 
 Although it may seem odd to partially implement a could have user story before all the should haves user stories, the reason for doing this was two fold. To avoid future corruption of the database by adding a new field into the post model at a later date when it became populated. The backend table to enable this feature has been implemented as has the field in the Post model. In a future dev cycle it would not take much effort to use this information in the front for the user to filter posts by (like is currently offered for by ingredient). Secondly, the work to get this set up in the backend was so similar to the work done for the filter by ingredient type user story that it was extremely 'doable' in the time given for this dev cycle. Starting the bookmark user stories, which really would need both to be implemented for a good user experience, would not have got finished in the time available.
 
+
+# Technologies & Languages Used
+
+- HTML
+- CSS
+- JavaScript
+- Python
+- [Git](https://git-scm.com/) used for version control.
+- [Github](https://www.github.com) IDE used in dev environment.
+- Balsamiq for project design planning and wireframe creation.
+- [Django](https://www.djangoproject.com/) was used as the Python framework for the site.
+- [Cloudinary](https://cloudinary.com/) was used for cloud media storage of user uploaded images.
+-  PostgreSQL database to store the blog site data.
+- [Heroku](https://www.heroku.com) was used to host the Lets Do Leftovers application.
+- [WAVE](https://wave.webaim.org/) to evaluate the accessibility of the site.
+- [Lucid Chart](https://www.lucidchart.com/pages/) used ERD feature to plan database structure
+
+## Libraries & Frameworks
+
+- Bootstrap v5.0.1
+- Django v4.2.16
+- Django AllAuth v0.57.2
+- Django Crispy Forms v2.3
+- Django Summernote v0.8.20.0
+
+  
+Further information is available in the [requirements.txt file](requirements.txt)
+
 ## Testing and Validation
 
 ### Testing Results
@@ -440,7 +468,7 @@ In your project workspace:
 ```
 ## PostgreSQL
 
-A new database instance can be created on PostgreSQL from Code Institute (https://dbs.ci-dbs.net/) for your project. 
+As a Code Institue student, a new database instance can be created on PostgreSQL from Code Institute. 
 
 - Enter CodeInstitute student email address and submit
 - Retrieve the database URL value from the email generated
@@ -486,7 +514,7 @@ This was great practice of working through a sw dev cycle to deliver an MVP in a
 
 ## Credits
 - README headings copied from a previous student hackathon (https://joanne1980.github.io/Name-the-animal/) that I worked on in a team. Original template created by Brian O Grady (github Mrbrianojee), Programme Director at Code Institute.
-- Deployment details in README were copied and adapted from a past project created by Code Institute facilitator Amy Richardson (https://freefido.herokuapp.com/)
+- Deployment details in README were copied and adapted from a past project created by Code Institute facilitator Amy Richardson (https://freefido.herokuapp.com/) as was the layout of the python validation table and some of the Agile Project Management section. 
 - Code Institute course materials and trainers - especially Amy Richardson, John Rearden and Mark Briscoe.
 - https:djecrety.ir was used to generate a secret key
 - pixaby.com for free vectors and images
