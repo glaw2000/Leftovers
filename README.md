@@ -291,12 +291,27 @@ Responsiveness tesing using dev tools.
 ### Validation
 All validation result screenshots are in the following folder: /documentation/test results of this repository and summarised below:
 
-- Using https://validator.w3.org/#validate_by_input each of the template pages I had created or updated was validated. I incurred one error on the post_detail page due to the text of the blog post input in the text editor by the blog post author was causing the validator to think there were an uneven number of opening and closing p tags. This was resolved on advice from a peer on the course (thanks Ricky Smithson) by placing my post.content template variable inside my div directly and not within p tags.
-- I incurred one warning about the aria label for the like button on the post_detail page. This has remained unresolved after trying several combinations to describe the thumbs up button a user can press on a post. The label is a succinct and descriptive as I could think of. 
+- Using https://validator.w3.org/#validate_by_input each of the template pages I had created or updated was validated. I incurred one error on the post_detail page due to the text of the blog post input in the text editor by the blog post author was causing the validator to think there were an uneven number of opening and closing p tags. This was resolved on advice from a peer on the course (thanks Ricky Smithson) by placing my post.content template variable inside my div directly and not within p tags.</br>
+I incurred one warning about the aria label for the like button on the post_detail page. This has remained unresolved after trying several combinations to describe the thumbs up button a user can press on a post. The label is a succinct and descriptive as I could think of. 
+Home page (landing.html) validation
+![picture alt](/documentation/test%20results/HTML%20Validation%20of%20page.png)
+All Posts (blog.html) page validation
+![picture alt](/documentation/test%20results/HTML%20Validation%20of%20All%20Posts%20page.png)
+Post (post_detail.html) page validation with Error
+![picture alt](/documentation/test%20results/Error%20Waning%20HTML%20validation%20post_detail%20page.png)
+Post (post_detail.html) page validation with Error resolved
+![picture alt](/documentation/test%20results/Error%20resolved%20HTML%20validation%20post_detail%20page.png)
 
-- Using https://jigsaw.w3.org/css-validator/ the styles.css file was validated. The same Error was seen 4 times due to using setting font-optical-sizing: auto. I removed the setting of font-optical-sizing: auto; from all items and problem was resolved. 
 
-- Using https://jshint.com/ both the comments.js and the likes.js files were validated and passed once the errors around either too much white space or not enough and a few lines being too long were resolved. 
+- Using https://jigsaw.w3.org/css-validator/ the styles.css file was validated. The same Error was seen 4 times due to using setting font-optical-sizing: auto. I removed the setting of font-optical-sizing: auto; from these items and problem was resolved. 
+![picture alt](/documentation/test%20results/CSS%20Validator%20Result.png)
+
+- Using https://jshint.com/ both the comments.js and the likes.js files were validated and passed. The validator called out that the variable postSlug was not set in the likes.js file. This varible was actually set in the post_detail.html file using inline script tags before calling the likes.js script as it was the only way I could get the feature to work.
+![picture alt](/documentation/test%20results/likes%20js%20file%20-%20jshint%20report.png)
+![picture alt](/documentation/test%20results/comments%20js%20file%20-%20jshint%20report.png)
+
+- Using https://pep8ci.herokuapp.com/  the following Python files were validated and passed once the errors around either too much white space or not enough, and a few lines being too long, were resolved.
+
 
 - Dev tools lighthouse report summary :
 
