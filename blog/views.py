@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views.generic import ListView
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -85,6 +85,7 @@ def post_detail(request, slug):
                 request, messages.SUCCESS,
                 'Your comment has been submitted and is awaiting approval'
                 )
+            return redirect('post_detail', slug=slug)
 
     comment_form = CommentForm()
 
