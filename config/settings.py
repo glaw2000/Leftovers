@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # if os.path.isfile('env.py'):
 #     import env
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-glaw2000-leftovers-lajp76mi6xk.ws.codeinstitute-ide.net', 'leftovers-app-32aa0915dd0b.herokuapp.com']
 
