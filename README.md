@@ -183,7 +183,7 @@ As the blog author I want to be able to add videos to my posts so that I can sha
 <pre></pre>
 
 **Social Sharing:**<br/>
-As a user I want to be able to to click on social media buttons for each post so that I can easily share posts across platforms like Pinterest, Instagram and Facebook  </br>
+As a user I want to be able to click on social media buttons for each post so that I can easily share posts across platforms like Pinterest, Instagram and Facebook  </br>
 **Acceptance Criteria:**
 - Have social media buttons under/next to each post
 - User can click on a posts social media button and it will allow them to re-post the blog post on their feed.
@@ -221,7 +221,7 @@ Designed mobile first and with the idea of using flex boxes so that the display 
 ![picture alt](/documentation/wireframes/post_page.png)
 ![picture alt](/documentation/wireframes/about_page.png)
 
-The login, logout and register pages were going to be handled by allauth so these were not drafted out as wirefranes. Once created in the app I just updated the colours of the text and buttons to match my chosen colour theme.
+The login, logout and register pages were going to be handled by allauth so these were not drafted out as wireframes. Once created in the app I just updated the colours of the text and buttons to match my chosen colour theme.
 
 During development and testing I realised that the images and text were too cramped when presented in a 3 x 3 layout. The 3 x 3 layout worked well on desktops and laptops so I used a media query to change the display to be a column of 1 on smaller devices. 
 
@@ -229,7 +229,7 @@ The colour theme of blue and yellow was chosen because the yellow is bright and 
 
 ### Accessibility Considerations
 Colours were tested through lighthouse for accessibility. 
-Planned that all images would have aria labels, buttons and menus would have roles so screenreaders can intrpret these elements.
+Planned that all images would have aria labels, buttons and menus would have roles so screen readers can interpret these elements.
 Planned to use semantic code to divide html pages into sections.
 
 ### Database Design
@@ -343,7 +343,7 @@ Manual test results
 - Test that admin can approve user comments in the admin dashboard - pass
 - Test that and admin user can edit comments from other users on posts using the admin dashboard - pass
 - Test that and admin user can delete comments from other users on posts using the admin dashboard - pass
-- Test on page load that the home page loads without overflow on screensizes of 320px wide and upwards - pass
+- Test on page load that the home page loads without overflow on screen sizes of 320px wide and upwards - pass
 - Test that an admin user can navigate the website from the front and add comments and likes to posts - pass
 - Test that when links are hovered over, the mouse pointer turns to a hand to show the link is selectable - pass
 - Test that all buttons change colour when hovered over - pass
@@ -363,22 +363,22 @@ Manual test results
 - Test that a logged in user can delete their own comment when its in an unapproved state - pass
 - Test that a logged in user can delete their own comment when its in an approved state - pass
 - Test that a non registered user can not add comments to posts - pass
-- Test that a a user cannot see unapproved comments written by other users - pass
+- Test that a user cannot see unapproved comments written by other users - pass
 - Test that when a logged in user clicks on the like (thumbs up icon) button at the bottom of a post the thumb turns green and the count of likes is incremented by 1 - pass
-- Test that when as logged in user clicks on the like (thumbs up icon) button at the bottom of a post the thumb turns back to blue and the cound of likes is decremented by 1 - pass
+- Test that when as logged in user clicks on the like (thumbs up icon) button at the bottom of a post the thumb turns back to blue and the count of likes is decremented by 1 - pass
 - Test that the like button continues to toggle between green and blue and the count goes up by 1 and down by 1 respectively for all future clicks by a logged in user - pass
 - Test that a second logged in user can like a post and the count is added to the existing count of  likes for that post - pass
 - Test that a user that is not logged in cannot alter the colour or the count of likes on a  post by clicking the like button - pass
 
 
-- Responsiveness was tested thoughout using chrome dev tools which enabled me to view the site on different devices as well as by specific width and height viewport settings.
+- Responsiveness was tested throughout using chrome dev tools which enabled me to view the site on different devices as well as by specific width and height viewport settings.
 - Accessibility Testing - Please see a snippet of the WAVE report below:
 ![picture alt](documentation/test%20results/WAVE%20Summary.png)
 ![picture alt](documentation/test%20results/WAVE%20Details.png)<br>
 I chose to ignore the two redundant link alerts which were concerning the links to the home page from both the logo and the title in the top heading bar of my page. I want users to be able to get back to the home page if they click either of these. 
-Initially when I ran wave I incurred the error shown below. This was because in both my nav sections I had multiple nav items setting aria-current to page. By introducing an if statement check on the request.path this error was resovled.
+Initially when I ran wave I incurred the error shown below. This was because in both my nav sections I had multiple nav items setting aria-current to page. By introducing an if statement check on the request.path this error was resolved.
 ![picture alt](documentation/test%20results/WAVE%20error%20Screenshot%202024-12-11%20103555.png)
-- Performance and accessibilty was also checked using chrome dev tools Lighhouse. A full set of screenshots for each page on both mobile and desktop can be found here: [test results]. In summary though the site scored well for performance, access, best practices and SEO. Performance was slightly lower on mobile than it was on desktop where there were a lot of images but it was still acceptable.
+- Performance and accessibility was also checked using chrome dev tools Lighthouse. A full set of screenshots for each page on both mobile and desktop can be found here: [test results]. In summary though the site scored well for performance, access, best practices and SEO. Performance was slightly lower on mobile than it was on desktop where there were a lot of images but it was still acceptable.
 Lighthouse report summary for home page from desktop:
 ![picture alt](documentation/test%20results/lighthouse%20report%20desktop.png)<br>
 
@@ -401,7 +401,7 @@ Post (post_detail.html) page validation with Error resolved
 - Using https://jigsaw.w3.org/css-validator/ the styles.css file was validated. The same Error was seen 4 times due to using setting font-optical-sizing: auto. I removed the setting of font-optical-sizing: auto; from these items and problem was resolved. 
 ![picture alt](/documentation/test%20results/CSS%20Validator%20Result.png)
 
-- Using https://jshint.com/ both the comments.js and the likes.js files were validated and passed. The validator called out that the variable postSlug was not set in the likes.js file. This varible was actually set in the post_detail.html file using inline script tags before calling the likes.js script as it was the only way I could get the feature to work.
+- Using https://jshint.com/ both the comments.js and the likes.js files were validated and passed. The validator called out that the variable postSlug was not set in the likes.js file. This variable was actually set in the post_detail.html file using inline script tags before calling the likes.js script as it was the only way I could get the feature to work.
 ![picture alt](/documentation/test%20results/likes%20js%20file%20-%20jshint%20report.png)
 ![picture alt](/documentation/test%20results/comments%20js%20file%20-%20jshint%20report.png)
 
