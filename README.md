@@ -340,31 +340,35 @@ Manual test results
 - Test that an admin user can add their own comments to posts using the admin dashboard - pass
 - Test that and admin user can edit their own comments to posts using the admin dashboard - pass
 - Test that and admin user can delete their own comments to posts using the admin dashboard - pass
+- Test that admin can approve user comments in the admin dashboard - pass
 - Test that and admin user can edit comments from other users on posts using the admin dashboard - pass
 - Test that and admin user can delete comments from other users on posts using the admin dashboard - pass
 - Test on page load that the home page loads without overflow on screensizes of 320px wide and upwards - pass
+- Test that an admin user can navigate the website from the front and add comments and likes to posts - pass
+- Test that when links are hovered over, the mouse pointer turns to a hand to show the link is selectable - pass
+- Test that all buttons change colour when hovered over - pass
 - Test that a user can click on any link on the home page and is taken to the correct linked page - pass
 - Test that the nav burger menu drops down when clicked on - pass
 - Test that all items in the nav burger menu are selectable and take the user to the correct destination - pass
 - Test that when a user clicks on the All Posts link that a page showing all posts is presented - pass 
 - Test that when a user clicks on an ingredient category from the home page that the posts of only that category are displayed - pass
 - Test that when a user clicks on About that the About page loads with an image and about text - pass
-- Test that when a user selects a post from a new tab opens showing that post. The original list of posts (either all or filtered list depending on how user navigated to the post) remains open. - Pass
+- Test that when a user selects a post from the list of posts, a new tab opens showing that post. The original list of posts (either all or filtered list depending on how user navigated to the post) remains open. - Pass
 - Test that users can register on the site and get an information message on success or fail - pass
 - Test that a registered user can sign in and receives a success message - pass
 - Test that a signed in user can sign out and gets a check and confirmation on doing so - pass
-- Test that a logged in user can add a comment to a post - pass
-- Test that admin can approve comments in the admin dashboard - pass
-- Test that a logged in user can edit their comment - pass
-- Test that a logged in user can delete their own comment - pass
-- Test that admin can delete any users comment - pass
+- Test that a logged in user can add a comment to a post and receive confirmation that they're comment is awaiting approval- pass
+- Test that a logged in user can edit their comment when it is in an unapproved state - pass
+- Test that a logged in user can edit their comment when it is in an approved state - pass
+- Test that a logged in user can delete their own comment when its in an unapproved state - pass
+- Test that a logged in user can delete their own comment when its in an approved state - pass
 - Test that a non registered user can not add comments to posts - pass
+- Test that a a user cannot see unapproved comments written by other users - pass
 - Test that when a logged in user clicks on the like (thumbs up icon) button at the bottom of a post the thumb turns green and the count of likes is incremented by 1 - pass
 - Test that when as logged in user clicks on the like (thumbs up icon) button at the bottom of a post the thumb turns back to blue and the cound of likes is decremented by 1 - pass
 - Test that the like button continues to toggle between green and blue and the count goes up by 1 and down by 1 respectively for all future clicks by a logged in user - pass
 - Test that a second logged in user can like a post and the count is added to the existing count of  likes for that post - pass
 - Test that a user that is not logged in cannot alter the colour or the count of likes on a  post by clicking the like button - pass
-
 
 
 - Responsiveness was tested thoughout using chrome dev tools which enabled me to view the site on different devices as well as by specific width and height viewport settings.
@@ -377,9 +381,6 @@ Initially when I ran wave I incurred the error shown below. This was because in 
 - Performance and accessibilty was also checked using chrome dev tools Lighhouse. A full set of screenshots for each page on both mobile and desktop can be found here: [test results]. In summary though the site scored well for performance, access, best practices and SEO. Performance was slightly lower on mobile than it was on desktop where there were a lot of images but it was still acceptable.
 Lighthouse report summary for home page from desktop:
 ![picture alt](documentation/test%20results/lighthouse%20report%20desktop.png)<br>
-
-
- 
 
 ### Validation
 All validation result screenshots are in the following folder: [test results](/documentation/test%20results/)
