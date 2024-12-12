@@ -195,11 +195,9 @@ Implemented - a logged in user has the option to comment on each post; see the c
 
 **User View Comments:**<br/>
 Implemented - a registered users is able to see all approved comments under each post
-<pre></pre>
 
 **Author Reply to Comments:**<br/>
 Implemented - the author can reply to comments on posts by leaving a written comment when logged in.
-<pre></pre> 
 
 **Manage Comments:**<br/>
 Implemented - an admin user can accept or reject comment submissions from user and create, edit and delete comments. Only the user that has written the comment can view that comment in 'draft' state. All users can only view comments by other members once they have been approved by the site admin and published.
@@ -208,6 +206,26 @@ Implemented - an admin user can accept or reject comment submissions from user a
 Implemented -  the Blog has consistent layouts between pages, consistent design elements and writing style and reflects author's passion of using up leftover food and avoiding waste as detailed on the About page.
 
 ### Optional Features (Could-Have User Stories)
+- **User Story # and title:** 
+Implemented .....
+
+**Like Posts:**<br/>
+Implemented - a registered user is able to click on a thumbs up icon next to each post to show they like it
+
+**User Feedback:**<br/>
+Implemented -  the author can receive feedback on posts through users being able to 
+leave comments and show if they like a post. A count of user likes next to each post can also be seen by the author. 
+
+**About Author:**<br/>
+Implemented - About section in the site has information about the author their passion of the blog subject. There is place for a photo of the author
+
+**User Edit of Comments:**<br/>
+Implemented - a logged in user is able to edit their comments they have made on posts and see their edited comment below the post. Approved edited comments can be viewed by all users
+
+**User Deletion of Comments:**<br/>
+Implemented a logged in user is able to delete their comments they have made on posts 
+
+### Optional Features (Should-Have User Stories)
 - **User Story # and title:** 
 Implemented .....
 
@@ -383,3 +401,15 @@ To start the deployment process , please follow the below steps:
 ## Future Improvements
 - Fix ....
 - Enhance ...
+**Bookmark Posts:**<br/>
+As a registered users I want to bookmark my favourite posts so that I can easily access specific posts of interest to me </br>
+**Acceptance Criteria:**
+- A logged in user has the option to bookmark each post
+- A logged in user can see all their bookmarked posts listed in once place
+<pre></pre>
+
+**Remove Bookmarks:**<br/>
+As a registered users I want to to be able to remove bookmarks so that I can manage my bookmarked list of posts </br>
+**Acceptance Criteria:**
+- A logged in user has the option to remove their bookmark from any previously bookmarked post
+<pre></pre>
