@@ -8,6 +8,20 @@ This is a full stack application that stores and presents blog posts, ingredient
 ### Purpose
 The purpose of this blog is to provide readers with advice, ideas and inspiration for what to do with leftover food to help cut down on food waste and save people money. It is not intended to be a recipe site.
 
+## Agile Methodologies - Project Management
+
+Lets Do Leftovers was developed following Agile planning methods. I used my [Github Projects Board](https://github.com/users/glaw2000/projects/2) to plan and document the user stories and their acceptance criteria. I prefer trello for actually planning dev tasks as I don't think having to set up issues and labels in Github is the most efficient planning tool. In this instance because I was working on my own I went old school and used daily lists to keep on top of my dev tasks. In future I would document the dev tasks in an online tool like trello and obviously in a team working environment it's essential everyone knows what each other is working on so there is no duplication. 
+
+### MoSCoW Prioritization
+
+I followed the MoSCoW Prioritization method for this project, identifying and labelling my:
+
+- **Must Haves**: the 'required', critical components of the project. 
+- **Should Haves**: the components that are valuable to the project but not absolutely 'vital' at the MVP stage. The 'Must Haves' must receive priority over the 'Should Haves'.
+- **Could Haves**: these are the features that are a 'bonus' to the project, it would be nice to have them in this phase, but only if the most important issues have been completed first and time allows.
+- **Won't Haves**: the features or components that either no longer fit the project's brief or are of very low priority for this release. 
+
+
 ## User Stories
 
 ### Must-Have User Stories
