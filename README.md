@@ -280,16 +280,22 @@ Issues were faced with .....
 
 Manual test results 
 - Title of test - pass / fail
-- 
-Accessibility Testing results
-- Please see a snippet of the WAVE report below:
 
-Responsiveness tesing using dev tools.
-- 
+
+
+- Responsiveness was tested thoughout using chrome dev tools which enabled me to view the site on different devices as well as by specific width and height viewport settings.
+- Accessibility Testing - Please see a snippet of the WAVE report below:
+![picture alt](documentation/test%20results/WAVE%20Summary.png)
+![picture alt](documentation/test%20results/WAVE%20Details.png)<br>
+I chose to ignore the two redundant link alerts which were concerning the links to the home page from both the logo and the title in the top heading bar of my page. I want users to be able to get back to the home page if they click either of these. 
+Initially when I ran wave I incurred the error shown below. This was because in both my nav sections I had multiple nav items setting aria-current to page. By introducing an if statement check on the request.path this error was resovled.
+![picture alt](documentation/test%20results/WAVE%20error%20Screenshot%202024-12-11%20103555.png)  
+
  
 
 ### Validation
-All validation result screenshots are in the following folder: /documentation/test results of this repository and summarised below:
+All validation result screenshots are in the following folder: [test results](/documentation/test%20results/)
+ of this repository and summarised below:
 
 - Using https://validator.w3.org/#validate_by_input each of the template pages I had created or updated was validated. I incurred one error on the post_detail page due to the text of the blog post input in the text editor by the blog post author was causing the validator to think there were an uneven number of opening and closing p tags. This was resolved on advice from a peer on the course (thanks Ricky Smithson) by placing my post.content template variable inside my div directly and not within p tags.</br>
 I incurred one warning about the aria label for the like button on the post_detail page. This has remained unresolved after trying several combinations to describe the thumbs up button a user can press on a post. The label is a succinct and descriptive as I could think of. 
@@ -477,11 +483,9 @@ This was great practice of working through a sw dev cycle to deliver an MVP in a
 - https://wave.webaim.org/ to test accessibility of site
 
 
-
 ## Future Improvements
 ### Fixes
 - Fix Image sizing of images. All images were converted to webp and compressed but the light house report suggests this is an area where further improvement could be made. The css styling if the image elements could be improved too.
-
 - Fix the aria label on the post like button. Several variations were tried but nothing that the HTML validator liked.
 
 ### Enhancements
