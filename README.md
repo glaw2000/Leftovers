@@ -289,6 +289,8 @@ Responsiveness tesing using dev tools.
  
 
 ### Validation
+All validation result screenshots are in the following folder: /documentation/test results of this repository and summarised below:
+
 - https://jsfiddle.net/ test details
 
 - https://validator.w3.org/#validate_by_input  test details
@@ -423,15 +425,17 @@ To start the deployment process , please follow the below steps:
 ## Reflection on Development Process
 
 ### Successes
-...... 
-
+A working MVP at the end of the dev cycle. 
+Completing all the must have user stories. 
+Getting some of the should have user stories developed. 
+Working through bugs and finding solutions. 
 
 ### Challenges
-......
+Time. Trying to achieve the must have user stories and associated documentation in the time given was challenging. 
 
 
 ### Final Thoughts
-..... 
+This was great practice of working through a sw dev cycle to deliver an MVP in a set amount of time. Just like in the real world, there are always more user stories than you have time to develop in a single dev cycle. By focussing on the must haves it was possible to achieve a working site.  
 
 
 ## Credits
@@ -441,6 +445,13 @@ To start the deployment process , please follow the below steps:
 - https:djecrety.ir was used to generate a secret key
 - pixaby.com for free vectors and images
 - google fonts for Roberto mono font used throughout the site
+- https://validator.w3.org/#validate_by_input  for validating html
+- https://jigsaw.w3.org/css-validator/ for validating css
+- https://jshint.com/ for validating java script 
+- https://pep8ci.herokuapp.com/ Python linter to validate code
+- Chrome Dev tools lighthouse for testing performance and accessibility of site
+- https://wave.webaim.org/ to test accessibility of site
+
 
 
 ## Future Improvements
