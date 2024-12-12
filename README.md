@@ -140,7 +140,7 @@ As a user I want to view the blog posts by meal type so that I can filter the vi
 - User can select a meal type (eg breakfast/lunch/dinner/snacks....) to present them with a list of all posts related to that meal type
 <pre></pre>
 
-**Sort Port Listing View:**<br/>
+**Sort Post Listing View:**<br/>
 As a user I want to be able to sort the listing of posts by certain criteria so that I can find posts I'm interested in quicker</br>
 **Acceptance Criteria:**
 - A user is able to sort posts by date created on
@@ -210,7 +210,13 @@ The colour theme of blue and yellow was chosen because the yellow is bright and 
 
 ### Accessibility Considerations
 Colours were tested through lighthouse for accessibility. 
-All images have aria labels and buttons and menus have been given roles so screenreaders can intrpret these elements.
+Planned that all images would have aria labels, buttons and menus would have roles so screenreaders can intrpret these elements.
+Planned to use semantic code to divide html pages into sections.
+
+### Database Design
+During the design phase I used lucid chart to draft out my proposed database schema as shown below:
+![picture alt](documentation/erd/ERD.png)
+All the planned tables and relationships were implemented along with the future category table.
 
 ## Features Implementation
 
@@ -280,7 +286,7 @@ Issues were faced with .....
 
 Manual test results 
 - Title of test - pass / fail
-
+Found comments duplicating in draft form if user refreshed screen after submitting a comment. 
 
 
 - Responsiveness was tested thoughout using chrome dev tools which enabled me to view the site on different devices as well as by specific width and height viewport settings.
@@ -289,7 +295,11 @@ Manual test results
 ![picture alt](documentation/test%20results/WAVE%20Details.png)<br>
 I chose to ignore the two redundant link alerts which were concerning the links to the home page from both the logo and the title in the top heading bar of my page. I want users to be able to get back to the home page if they click either of these. 
 Initially when I ran wave I incurred the error shown below. This was because in both my nav sections I had multiple nav items setting aria-current to page. By introducing an if statement check on the request.path this error was resovled.
-![picture alt](documentation/test%20results/WAVE%20error%20Screenshot%202024-12-11%20103555.png)  
+![picture alt](documentation/test%20results/WAVE%20error%20Screenshot%202024-12-11%20103555.png)
+- Performance and accessibilty was also checked using chrome dev tools Lighhouse. A full set of screenshots for each page on both mobile and desktop can be found here: [test results]. In summary though the site scored well for performance, access, best practices and SEO. Performance was slightly lower on mobile than it was on desktop where there were a lot of images but it was still acceptable.
+Lighthouse report summary for home page from desktop:
+![picture alt](documentation/test%20results/lighthouse%20report%20desktop.png)<br>
+
 
  
 
@@ -324,13 +334,6 @@ Post (post_detail.html) page validation with Error resolved
 | landing | na | na | na | [no errors](documentation/test%20results/landing%20urls%20py%20file%20validated.png) | [no errors](documentation/test%20results/landing%20views%20py%20file%20validated.png) |
 | about | na  | na  | na | [no errors](documentation/test%20results/about%20urls%20py%20file%20validated.png) | [no errors](documentation/test%20results/about%20views%20py%20file%20validated.png) | 
 | blog | [no errors](documentation/test%20results/blog%20admin%20py%20file%20validated.png) | [no errors](documentation/test%20results/blog%20forms%20py%20file%20validated.png) | [no errors](documentation/test%20results/blog%20models%20py%20file%20validated.png) | [no errors](documentation/test%20results/blog%20urls%20py%20file%20validated.png) | [no errors](documentation/test%20results/blog%20views%20py%20file%20re-validated%20after%20redirect%20added.png) |
-
-
-
-
-- Dev tools lighthouse report summary :
-
-
 
 ## Deployment
 
